@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation du thème Hugo Learn</title>
+    <link>http://example.org/fr/</link>
+    <description>Recent content on Documentation du thème Hugo Learn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Apr 2019 18:16:54 +0200</lastBuildDate>
+    
+	<atom:link href="http://example.org/fr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fonctions globales</title>
+      <link>http://example.org/fr/lua-core-interface/global-functions/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:54 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-core-interface/global-functions/</guid>
+      <description> Close() Tacview 1.7.2
+Ferme l&amp;rsquo;application sans conditions.
+NOTE : cette fonction ne demande pas à l&amp;rsquo;utilisateur de sauvegarder son travail avant la fermeture.
+</description>
+    </item>
+    
+    <item>
+      <title>Paramètres</title>
+      <link>http://example.org/fr/lua-core-interface/settings/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:53 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-core-interface/settings/</guid>
+      <description>Cette interface permet d&amp;rsquo;accéder au paramètrage de Tacview. Si vous souhaitez sauvegarder ou charger les paramètres de votre addon, regardez AddOns.Current.Settings
+Settings.SetBoolean( settingPath, newBooleanValue ) Tacview 1.7.2
+Sauvegarde un réglage Booléen sous le nom donnée.
+settingPath peut prendre une des valeurs suivantes :
+ &amp;quot;UI.View.Grid.Visible&amp;quot; &amp;ndash; Active/désactive la grille latitude/longitude &amp;quot;UI.View.HUD.Visible&amp;quot; &amp;ndash; Active/désactive le head-up-display du cockpit &amp;quot;UI.View.Overlay.Visible&amp;quot; &amp;ndash; Active/désactive la surcouche d&amp;rsquo;informations affichée sur la vue 3D  Settings.</description>
+    </item>
+    
+    <item>
+      <title>Add Ons</title>
+      <link>http://example.org/fr/lua-core-interface/addons/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:52 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-core-interface/addons/</guid>
+      <description>L&amp;rsquo;interface add-ons est principalement destinée à préciser des informations concernant votre add-on.
+Les réglages de votre addon seront sauvegardés à la fermeture et rechargés à l&amp;rsquo;ouverture de Tacview.
+AddOns.Current.GetPath() Tacview 1.7.4
+Retrouve le chemin racine actuel du addon.
+C&amp;rsquo;est typiquement là où se trouve le dll ou lua de votre addon.
+Cette fonction est utile pour accéder ou charger vos ressources personnalisées sans avoir à coder en dur le chemin vers celles-ci.</description>
+    </item>
+    
+    <item>
+      <title>Log</title>
+      <link>http://example.org/fr/lua-core-interface/log/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:51 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-core-interface/log/</guid>
+      <description>Le module log est typiquement utilisé pour afficher des messages et erreurs pouvant être utiles au diagnostique d&amp;rsquo;un problème particulier.
+Tous les caractères envoyés au log sont également sauvegardés dans le fichier %TEMP%\Tacview.log.
+S&amp;rsquo;il vous plait, utilisez le log avec sagesse et essayez de n&amp;rsquo;afficher que des messages ayant un sens pour l&amp;rsquo;utilisateur final.
+Ne spammez pas le log avec des messages de développement internes, cela peut amener de la confusion pour l&amp;rsquo;utilisateur cherchant des informations plus pertinentes provenant des autres modules.</description>
+    </item>
+    
+    <item>
+      <title>UI.MessageBox</title>
+      <link>http://example.org/fr/lua-core-interface/ui.messagebox/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:50 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-core-interface/ui.messagebox/</guid>
+      <description>Les boîtes de dialogue peuvent afficher des notifications modales et permettre de poser des questions simples à l&amp;rsquo;utilisateur.
+Il est recommandé de ne pas utiliser des boîtes de dialogue de manière excessive parce qu&amp;rsquo;elles cassent le flow de productivité de l&amp;rsquo;utilisateur.
+Lorsque c&amp;rsquo;est possible, vous pouvez utiliser le log pour afficher la plupart de vos messages et vous appuyer sur les paramètres pour choisir le comportement approprié selon les circonstances.</description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>http://example.org/fr/lua-core-interface/math/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:49 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-core-interface/math/</guid>
+      <description>Ce module contient tous les outils nécessaires pour convertir et modifier les données typiques de la télémétrie.
+Ici, nous appelons vecteurs, des tables comprenant trois composantes :
+{ x = nombre, y = nombre, z = nombre, }  Math.Angle.Subtract( leftAngle , rightAngle ) Tacview 1.7.2
+Soustraction entre deux angles en radian.
+Valeur retournée :
+Différence entre leftAngle et rightAngle.
+Le résultat est normalisé entre [-pi, +pi].
+Math.Vector.LongitudeLatitudeToCartesian( {longitude = number , latitude = number , altitude = number} ) Tacview 1.</description>
+    </item>
+    
+    <item>
+      <title>Contexte</title>
+      <link>http://example.org/fr/lua-core-interface/context/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:48 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-core-interface/context/</guid>
+      <description>Comprend toutes les informations relatives à la représentation de la télémétrie à l&amp;rsquo;écran. NOTE : voir Lua Main Interface pour des fonctions additionnelles.
+Context.GetAbsoluteTime() Tacview 1.7.5
+Retrouve le temps courant de la télémétrie en seconde depuis le 01-01-1970 (ce paramètre est utile pour échanger avec le module Télémétrie).
+Context.SetAbsoluteTime( absoluteTime ) Tacview 1.7.6
+Règle le temps courant de la télémétrie pour le rejeu des données en secondes depuis le 01-01-1970.</description>
+    </item>
+    
+    <item>
+      <title>Télémétrie</title>
+      <link>http://example.org/fr/lua-core-interface/telemetry/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:47 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-core-interface/telemetry/</guid>
+      <description>Ce module est le coeur de Tacview.
+Utilisez le gestionnaire de télémétrie pour lire et écrire des données pour tout objet dynamique.
+Telemetry.BeginningOfTime Tacview 1.7.5
+Telemetry.EndOfTime Tacview 1.7.5
+Constantes utilisées pour spécifier les marqueurs de temps spéciaux.
+BeginningOfTime est typiquement utilisé pour créer des objets intemporels comme les waypoints ou les bâtiments.
+Telemetry.InvalidPropertyIndex Tacview 1.7.5
+Constante utilisée pour détecter des propriétés invalides.
+Telemetry.Tags Tacview 1.7.3
+Énumération des bits utilisés pour définir les types d&amp;rsquo;objets.</description>
+    </item>
+    
+    <item>
+      <title>Terrain</title>
+      <link>http://example.org/fr/lua-core-interface/terrain/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:46 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-core-interface/terrain/</guid>
+      <description>Les fonctions suivantes peuvent être utilisées pour personnaliser le terrain et récupérer des informations à son sujet.
+Terrain.GetElevation( longitude , latitude ) Tacview 1.7.5
+Récupère une altitude donnée en mètre. Longitude et latitude sont en radian.</description>
+    </item>
+    
+    <item>
+      <title>UI</title>
+      <link>http://example.org/fr/lua-main-interface/ui/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:46 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-main-interface/ui/</guid>
+      <description>Fonctions générales pour manipuler l&amp;rsquo;interface utilisateur et l&amp;rsquo;aspect de Tacview.
+UI.EnterFullScreen() Tacview 1.7.2
+UI.ExitFullScreen() Tacview 1.7.2
+Entrer/quitter le mode plein écran.
+En mode plein écran, Tacview affiche uniquement la vue 3D dans une fenêtre sans bordure.
+Cela peut être utile lors d&amp;rsquo;un débriefing en ligne, afin que l&amp;rsquo;utilisateur puisse se concentrer pleinement sur les objets affichés dans la vue 3D.
+L&amp;rsquo;utilisateur peut basculer manuellement entre le mode plein écran et le mode fenêtré en appuyant sur [ALT] + [ENTER].</description>
+    </item>
+    
+    <item>
+      <title>UI.Menus</title>
+      <link>http://example.org/fr/lua-main-interface/ui.menus/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:45 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-main-interface/ui.menus/</guid>
+      <description>L’interface Menu est utile pour créer et insérer des commandes et des options dans les menus de Tacview.
+Tous les nouveaux menus seront ajoutés au menu des addons.
+Tacview supprimera automatiquement les éléments de menu d&amp;rsquo;un addon qui est déchargé.
+UI.Menus.AddMenu( parentMenuId , textLabel ) Tacview 1.7.2
+Crée et insère un menu dans le menu Tacview.
+Vous pouvez spécifier l&amp;rsquo;identifiant d&amp;rsquo;un menu parent ou vous pouvez utiliser nil pour insérer votre menu dans le menu principal des add-ons Tacview.</description>
+    </item>
+    
+    <item>
+      <title>UI.Renderer</title>
+      <link>http://example.org/fr/lua-main-interface/ui.renderer/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:44 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-main-interface/ui.renderer/</guid>
+      <description>Le rendu est généralement utilisé pour afficher des objets dans la vue 3D principale.
+NOTE: Les fonctions de dessin peuvent être appelées uniquement pendant les événements de dessin.
+Voir Events.* pour savoir comment enregistrer des callbacks de dessin.
+UI.Renderer.GetWidth() Tacview 1.7.2
+Récupérer la largeur de rendu en pixels ou nil en dehors d&amp;rsquo;un événement de dessin.
+UI.Renderer.GetHeight() Tacview 1.7.2
+Récupère la hauteur du moteur de rendu en pixels ou nil en dehors d&amp;rsquo;un événement de dessin.</description>
+    </item>
+    
+    <item>
+      <title>Evénements</title>
+      <link>http://example.org/fr/lua-main-interface/events/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:43 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-main-interface/events/</guid>
+      <description>Vous pouvez enregistrer des rappels pour différents types d’événements dans Tacview.
+Events.Update.RegisterListener( function ) Tacview 1.7.2
+Une fois par image, Tacview appellera votre fonction qui doit correspondre à la signature suivante :
+Update(dt, absoluteTime)
+ dt est le nombre de secondes écoulées dans la vie réelle depuis le dernier Update() absoluteTime est la durée actuelle de la télémesure en secondes depuis le 01/01/1970 (ce paramètre est utile pour parler avec le module de télémétrie)  Events.</description>
+    </item>
+    
+    <item>
+      <title>Context</title>
+      <link>http://example.org/fr/lua-main-interface/context/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:42 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-main-interface/context/</guid>
+      <description>Ce module contient toutes les informations relatives à la représentation de télémétrie à l&amp;rsquo;écran.
+NOTE : Voir Lua Core Interface pour des fonctions supplémentaires.
+Context.GetSelectedObject( objectIndex ) Tacview 1.7.2
+Récupère le handle de l&amp;rsquo;un des objets sélectionnés.
+objectIndex peut être 0 pour l&amp;rsquo;objet primaire ou 1 pour l&amp;rsquo;objet secondaire.
+Il est actuellement possible de sélectionner deux objets en même temps.
+Context.SetSelectedObject( objectIndex , objectHandle ) Tacview 1.7.2
+Choisissez quel objet est actuellement sélectionné.</description>
+    </item>
+    
+    <item>
+      <title>Context.Camera</title>
+      <link>http://example.org/fr/lua-main-interface/context.camera/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:41 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-main-interface/context.camera/</guid>
+      <description>La caméra est utilisée pour définir le point de vue de l&amp;rsquo;utilisateur dans la fenêtre 3D de Tacview.
+Context.Camera.GetMode() Tacview 1.7.2
+Retourne le mode de caméra actuel.
+Valeur retournée :
+Camera.Cockpit
+Camera.External
+Camera.Satellite
+Camera.Free
+Context.Camera.SetOffset( offsetData ) Tacview 1.7.2
+Décalage temporaire de la position et de la rotation de la caméra.
+Le décalage est automatiquement réinitialisé à chaque nouvelle image lorsqu&amp;rsquo;il n&amp;rsquo;est pas remplacé par un addon.
+Les composants suivants peuvent être spécifiés, ils sont tous facultatifs :</description>
+    </item>
+    
+    <item>
+      <title>Context.Playback</title>
+      <link>http://example.org/fr/lua-main-interface/context.playback/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:40 +0200</pubDate>
+      
+      <guid>http://example.org/fr/lua-main-interface/context.playback/</guid>
+      <description>Fonctions pour contrôler la lecture des données de télémétrie chargées.
+Context.Playback.Play() Tacview 1.7.6
+Context.Playback.Pause() Tacview 1.7.6
+Reprendre / mettre en pause la lecture.
+Context.Playback.IsPlaying() Tacview 1.7.6
+Retourne false si la lecture est actuellement en pause.</description>
+    </item>
+    
+    <item>
+      <title>Crédits</title>
+      <link>http://example.org/fr/credits/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:40 +0200</pubDate>
+      
+      <guid>http://example.org/fr/credits/</guid>
+      <description>Copyright © 2006-2019 Raia Software Inc. Tous droits réservés.
+Auteur de l&amp;rsquo;application Tacview : Frantz &amp;ldquo;Vyrtuoz&amp;rdquo; Raia
+Documentation LUA SDK par Frantz &amp;ldquo;Vyrtuoz&amp;rdquo; Raia
+Traduction française de la documentation LUA SDK par Frédéric &amp;ldquo;Couby Stark&amp;rdquo; Coubard</description>
+    </item>
+    
+  </channel>
+</rss>

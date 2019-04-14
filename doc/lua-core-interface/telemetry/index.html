@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.51" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Telemetry :: Documentation for Hugo Learn Theme</title>
+
+    
+    <link href="/css/nucleus.css?1555266387" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555266387" rel="stylesheet">
+    <link href="/css/hybrid.css?1555266387" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555266387" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555266387" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555266387" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1555266387" rel="stylesheet">
+    <link href="/css/theme.css?1555266387" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555266387" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1555266387" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1555266387"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/lua-core-interface/telemetry/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="/"><img src="/logo.png" /></a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1555266387"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555266387"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/example.org\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1555266387"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/lua-core-interface/" title="LUA Core Interface" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/lua-core-interface/">
+          <b>1. </b>LUA Core Interface
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-core-interface/global-functions/" title="Global functions" class="dd-item ">
+        <a href="/lua-core-interface/global-functions/">
+        Global functions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-core-interface/settings/" title="Settings" class="dd-item ">
+        <a href="/lua-core-interface/settings/">
+        Settings
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-core-interface/addons/" title="Add Ons" class="dd-item ">
+        <a href="/lua-core-interface/addons/">
+        Add Ons
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-core-interface/log/" title="Log" class="dd-item ">
+        <a href="/lua-core-interface/log/">
+        Log
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-core-interface/ui.messagebox/" title="UI.MessageBox" class="dd-item ">
+        <a href="/lua-core-interface/ui.messagebox/">
+        UI.MessageBox
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-core-interface/math/" title="Math" class="dd-item ">
+        <a href="/lua-core-interface/math/">
+        Math
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-core-interface/context/" title="Context" class="dd-item ">
+        <a href="/lua-core-interface/context/">
+        Context
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-core-interface/telemetry/" title="Telemetry" class="dd-item active">
+        <a href="/lua-core-interface/telemetry/">
+        Telemetry
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-core-interface/terrain/" title="Terrain" class="dd-item ">
+        <a href="/lua-core-interface/terrain/">
+        Terrain
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/lua-main-interface/" title="LUA Main Interface" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lua-main-interface/">
+          <b>2. </b>LUA Main Interface
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-main-interface/ui/" title="UI" class="dd-item ">
+        <a href="/lua-main-interface/ui/">
+        UI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-main-interface/ui.menus/" title="UI.Menus" class="dd-item ">
+        <a href="/lua-main-interface/ui.menus/">
+        UI.Menus
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-main-interface/ui.renderer/" title="UI.Renderer" class="dd-item ">
+        <a href="/lua-main-interface/ui.renderer/">
+        UI.Renderer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-main-interface/events/" title="Events" class="dd-item ">
+        <a href="/lua-main-interface/events/">
+        Events
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-main-interface/context/" title="Context" class="dd-item ">
+        <a href="/lua-main-interface/context/">
+        Context
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-main-interface/context.camera/" title="Context.Camera" class="dd-item ">
+        <a href="/lua-main-interface/context.camera/">
+        Context.Camera
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lua-main-interface/context.playback/" title="Context.Playback" class="dd-item ">
+        <a href="/lua-main-interface/context.playback/">
+        Context.Playback
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.tacview.net"><i class='fas fa-fighter-jet'></i> Tacview home</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://example.org/credits"><i class='fas fa-bullhorn'></i> Credits</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="http://example.org/lua-core-interface/telemetry/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="fr" value="http://example.org/fr/lua-core-interface/telemetry/">Français</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/lua-core-interface/'>LUA Core Interface</a> > Telemetry
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#telemetry-beginningoftime">Telemetry.BeginningOfTime</a></li>
+<li><a href="#telemetry-endoftime">Telemetry.EndOfTime</a></li>
+<li><a href="#telemetry-invalidpropertyindex">Telemetry.InvalidPropertyIndex</a></li>
+<li><a href="#telemetry-tags">Telemetry.Tags</a></li>
+<li><a href="#telemetry-property">Telemetry.Property</a></li>
+<li><a href="#telemetry-clear">Telemetry.Clear()</a></li>
+<li><a href="#telemetry-isempty">Telemetry.IsEmpty()</a></li>
+<li><a href="#telemetry-islikeempty">Telemetry.IsLikeEmpty()</a></li>
+<li><a href="#telemetry-getdatatimerange">Telemetry.GetDataTimeRange()</a></li>
+<li><a href="#telemetry-getcurrentobjecthandle-objectid">Telemetry.GetCurrentObjectHandle( objectId )</a></li>
+<li><a href="#telemetry-getcurrentorcreateobjecthandle-objectid">Telemetry.GetCurrentOrCreateObjectHandle( objectId )</a></li>
+<li><a href="#telemetry-getorcreateobjecthandle-objectid-absolutetime">Telemetry.GetOrCreateObjectHandle( objectId , absoluteTime )</a></li>
+<li><a href="#telemetry-getcurrenttags-objecthandle">Telemetry.GetCurrentTags( objectHandle )</a></li>
+<li><a href="#telemetry-getcurrentshortname-objecthandle">Telemetry.GetCurrentShortName( objectHandle )</a></li>
+<li><a href="#telemetry-gettransform-objecthandle-absolutetime">Telemetry.GetTransform( objectHandle , absoluteTime )</a></li>
+<li><a href="#telemetry-getcurrenttransform-objecthandle">Telemetry.GetCurrentTransform( objectHandle )</a></li>
+<li><a href="#telemetry-getcurrentverticalgforce-objecthandle">Telemetry.GetCurrentVerticalGForce( objectHandle )</a></li>
+<li><a href="#telemetry-getglobalnumericpropertyindex-propertyname-autocreate">Telemetry.GetGlobalNumericPropertyIndex( propertyName , autoCreate )</a></li>
+<li><a href="#telemetry-getglobaltextpropertyindex-propertyname-autocreate">Telemetry.GetGlobalTextPropertyIndex( propertyName , autoCreate )</a></li>
+<li><a href="#telemetry-getobjectsnumericpropertyindex-propertyname-autocreate">Telemetry.GetObjectsNumericPropertyIndex( propertyName , autoCreate )</a></li>
+<li><a href="#telemetry-getobjectstextpropertyindex-propertyname-autocreate">Telemetry.GetObjectsTextPropertyIndex( propertyName , autoCreate )</a></li>
+<li><a href="#telemetry-getnumericsample-objecthandle-absolutetime-propertyindex">Telemetry.GetNumericSample( objectHandle , absoluteTime , propertyIndex )</a></li>
+<li><a href="#telemetry-gettextsample-objecthandle-absolutetime-propertyindex">Telemetry.GetTextSample( objectHandle , absoluteTime , propertyIndex )</a></li>
+<li><a href="#telemetry-setnumericsample-objecthandle-absolutetime-propertyindex-value">Telemetry.SetNumericSample( objectHandle , absoluteTime , propertyIndex , value )</a></li>
+<li><a href="#telemetry-settextsample-objecthandle-absolutetime-propertyindex-value">Telemetry.SetTextSample( objectHandle , absoluteTime , propertyIndex , value )</a></li>
+<li><a href="#telemetry-settransform-objecthandle-absolutetime-transform">Telemetry.SetTransform( objectHandle , absoluteTime , transform )</a></li>
+<li><a href="#telemetry-getlifetime-objecthandle">Telemetry.GetLifeTime( objectHandle )</a></li>
+<li><a href="#telemetry-setlifetimeend-objecthandle-absolutetime">Telemetry.SetLifeTimeEnd( objectHandle , absoluteTime )</a></li>
+<li><a href="#telemetry-deleteobject-objecthandle">Telemetry.DeleteObject( objectHandle )</a></li>
+<li><a href="#telemetry-getobjectcount">Telemetry.GetObjectCount()</a></li>
+<li><a href="#telemetry-getobjecthandlebyindex-index">Telemetry.GetObjectHandleByIndex( index )</a></li>
+<li><a href="#telemetry-getobjectid-objecthandle">Telemetry.GetObjectId( objectHandle )</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Telemetry
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>This module is the heart of Tacview.</p>
+
+<p>Use the telemetry manager to read and write any data for any dynamic object.</p>
+
+<h4 id="telemetry-beginningoftime">Telemetry.BeginningOfTime</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<h4 id="telemetry-endoftime">Telemetry.EndOfTime</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Constants used to specify special time stamps.</p>
+
+<p><strong>BeginningOfTime</strong> is typically used to create timeless objects like waypoints or buildings.</p>
+
+<h4 id="telemetry-invalidpropertyindex">Telemetry.InvalidPropertyIndex</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Constant used to detect invalid properties.</p>
+
+<h4 id="telemetry-tags">Telemetry.Tags</h4>
+
+<p><em>Tacview 1.7.3</em></p>
+
+<p>Enumeration of bits used to defined object types.</p>
+
+<pre><code>    -- Basic Type
+
+    Telemetry.Tags.FixedWing
+    Telemetry.Tags.Rotorcraft
+
+    Telemetry.Tags.Armor
+    Telemetry.Tags.AntiAircraft
+    Telemetry.Tags.Vehicle
+    Telemetry.Tags.Watercraft
+
+    Telemetry.Tags.Human
+    Telemetry.Tags.Biologic
+
+    Telemetry.Tags.Missile
+    Telemetry.Tags.Rocket
+    Telemetry.Tags.Bomb
+    Telemetry.Tags.Torpedo
+    Telemetry.Tags.Projectile
+    Telemetry.Tags.Beam
+
+    Telemetry.Tags.Decoy
+
+    Telemetry.Tags.Building
+
+    Telemetry.Tags.Bullseye
+    Telemetry.Tags.Waypoint
+</code></pre>
+
+<h4 id="telemetry-property">Telemetry.Property</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<p>List of the names of the properties natively supported by Tacview.</p>
+
+<pre><code>    -- Text properties
+
+    Telemetry.Property.Text.Callsign
+    Telemetry.Property.Text.Event
+    Telemetry.Property.Text.Name
+
+    -- Numeric properties
+
+    Telemetry.Property.Numeric.Disabled
+    Telemetry.Property.Numeric.EngagementRange
+</code></pre>
+
+<h4 id="telemetry-clear">Telemetry.Clear()</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Purge all telemetry data currently loaded in memory.</p>
+
+<p>This function does not warn the user, nor it gives him the opportunity to save any data.</p>
+
+<p>This function does not interrupt or stop any recording in progress. It simply purges all the data recorded up to that point.</p>
+
+<h4 id="telemetry-isempty">Telemetry.IsEmpty()</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<p>Tells if no at all telemetry is currently loaded in memory.</p>
+
+<p>This include intemporal data.</p>
+
+<h4 id="telemetry-islikeempty">Telemetry.IsLikeEmpty()</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<p>Tells if no significant telemetry is currently loaded in memory.</p>
+
+<p>For example, if no data or only intemporal data is loaded this function returns <strong>true</strong>.</p>
+
+<p>Otherwise it returns <strong>false</strong>.</p>
+
+<h4 id="telemetry-getdatatimerange">Telemetry.GetDataTimeRange()</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<p>Retrieve the extend of the telemetry data currently loaded in memory.</p>
+
+<p>This excludes any intemporal samples like bullseyes position for example.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+    {<br>
+        beginTime,      &ndash; first sample absolute time<br>
+        endTime         &ndash; last sample absolute time<br>
+    }</p>
+</div>
+
+
+<h4 id="telemetry-getcurrentobjecthandle-objectid">Telemetry.GetCurrentObjectHandle( objectId )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Retrieves the handle of the specified object at the current update time.</p>
+
+<p>If there are several objects with the same id (for example a player which has spawned in the same aircraft multiple time during the same session), the telemetry manager will return the object which is the most appropriate for the current time frame.</p>
+
+<p>Unlike Ids, objects handles uniquely identify each object currently loaded in memory.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        objectHandle (integer)</p>
+</div>
+
+
+<h4 id="telemetry-getcurrentorcreateobjecthandle-objectid">Telemetry.GetCurrentOrCreateObjectHandle( objectId )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Retrieves the handle of the specified object at the current update time.</p>
+
+<p>If the give object id is not found, then a new object will be created at the current update time with the given id.</p>
+
+<p>Unlike Ids, objects handles uniquely identify each object currently loaded in memory.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        objectHandle (integer)</p>
+</div>
+
+
+<h4 id="telemetry-getorcreateobjecthandle-objectid-absolutetime">Telemetry.GetOrCreateObjectHandle( objectId , absoluteTime )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Retrieves the handle of the specified object at the specified time.</p>
+
+<p>If the given object id is not found, then a new object will be created at the specified time with the given id.</p>
+
+<p>Unlike Ids, objects handles uniquely identify each object currently loaded in memory.</p>
+
+<p>To create a timeless object like a waypoint, you can use the following:
+<code>local newObjectHandle = Tacview.Telemetry.GetOrCreateObjectHandle( objectId , Tacview.Telemetry.BeginningOfTime )</code></p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        objectHandle (integer)</p>
+</div>
+
+
+<h4 id="telemetry-getcurrenttags-objecthandle">Telemetry.GetCurrentTags( objectHandle )</h4>
+
+<p><em>Tacview 1.7.3</em></p>
+
+<p>Return given object tags as a bit field.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        Each bit of the returned integer corresponds to a specific tag.<br>
+        The combination of these tags defines the current object type.<br>
+        The object type can evolve over time and be refined depending on available telemetry at this point.</p>
+</div>
+
+
+<h4 id="telemetry-getcurrentshortname-objecthandle">Telemetry.GetCurrentShortName( objectHandle )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Return given object short name at the current update time.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        Text which typically correspond to the NATO code or any other appropriate short designation for the object.</p>
+</div>
+
+
+<h4 id="telemetry-gettransform-objecthandle-absolutetime">Telemetry.GetTransform( objectHandle , absoluteTime )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<h4 id="telemetry-getcurrenttransform-objecthandle">Telemetry.GetCurrentTransform( objectHandle )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Returns given object position/rotation at the current update or specified time.</p>
+
+<p>Some objects (typically bullets) may not have all the information available.</p>
+
+<p>For example, the rotation information may not be available for all aircraft.</p>
+
+<p>Native coordinates correspond the original coordinates in the source flight simulator (typically for BMS and DCS).</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br></p>
+</div>
+
+
+<pre><code>    ObjectTransform =
+    {
+        time = sample_absolute_time,            -- (seconds) This effective absolute time of this sample may be different from current update time if the object does not exist yet, or anymore...
+
+        x = cartesianPositionX,                 -- (meters) Cartesian position (ALWAYS AVAILABLE)
+        y = cartesianPositionY,                 -- (meters) Cartesian position (ALWAYS AVAILABLE)
+        z = cartesianPositionZ,                 -- (meters) Cartesian position (ALWAYS AVAILABLE)
+
+        longitude = sphericalLongitude,         -- (radian) Spherical position (ALWAYS AVAILABLE)
+        latitude = sphericalLatitude,           -- (radian) Spherical position (ALWAYS AVAILABLE)
+        altitude = absoluteAltitude,            -- (meters) Spherical position (ALWAYS AVAILABLE)
+
+        roll = objectRoll,                      -- (radian) roll  axis rotation (if rotationIsValid == true)
+        pitch = objectPitch,                    -- (radian) pitch axis rotation (if rotationIsValid == true)
+        yaw = objectYaw,                        -- (radian) yaw   axis rotation (if rotationIsValid == true)
+
+        u = nativePositionX,                    -- (meters) Native x coordinate (if nativeCoordinatesAreValid == true)
+        v = nativePositionY,                    -- (meters) Native y coordinate (if nativeCoordinatesAreValid == true)
+        heading = nativeHeadingToNorth,         -- (radian) Heading in native coordinates system (if nativeCoordinatesAreValid == true &amp; rotationIsValid == true)
+
+        rotationIsValid = boolean,              -- Set to true if rotation information is valid (otherwise the data may be emulated)
+        nativeCoordinatesAreValid = boolean,    -- Set to true if native coordinates are valid (otherwise u, v and heading are set to zero)
+    }
+</code></pre>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        value , validity<br>
+        validity is set to false if the value does not really apply for the given time (typically if the object does not exist at the given time) event when validity is set to false, the value is valid and usable (this simplify the client code)</p>
+</div>
+
+
+<h4 id="telemetry-getcurrentverticalgforce-objecthandle">Telemetry.GetCurrentVerticalGForce( objectHandle )</h4>
+
+<p><em>Tacview 1.7.3</em></p>
+
+<p>Returns given object vertical G-Force if available at current time.</p>
+
+<p>If vertical G-Force has been recorded, then Tacview will return the interpolated sample.</p>
+
+<p>If vertical G-Force has not been recorded, but rotation data is available, Tacview will calculate the vertical G-Force.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        <strong>Vertical G-Force</strong> if available.<br>
+        <strong>nil</strong> when not enough data is available (or object does not exist at this time).</p>
+</div>
+
+
+<h4 id="telemetry-getglobalnumericpropertyindex-propertyname-autocreate">Telemetry.GetGlobalNumericPropertyIndex( propertyName , autoCreate )</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<h4 id="telemetry-getglobaltextpropertyindex-propertyname-autocreate">Telemetry.GetGlobalTextPropertyIndex( propertyName , autoCreate )</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<p>Retrieve a property for the global object (0).</p>
+
+<p>If the property does not exist yet:</p>
+
+<ul>
+<li>if autoCreate is true, then the property will be created and its index returned.</li>
+<li>if autoCreate is false, then Telemetry.InvalidPropertyIndex will be returned.</li>
+</ul>
+
+<p>To optimize CPU and memory, numeric and text properties are separate in the telemetry manager.</p>
+
+<div class="notices info" ><p><strong>WARNING:</strong> Because numeric and text properties are separate, indexes for numeric and text samples may overlap and cannot be mixed.</p>
+</div>
+
+
+<h4 id="telemetry-getobjectsnumericpropertyindex-propertyname-autocreate">Telemetry.GetObjectsNumericPropertyIndex( propertyName , autoCreate )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<h4 id="telemetry-getobjectstextpropertyindex-propertyname-autocreate">Telemetry.GetObjectsTextPropertyIndex( propertyName , autoCreate )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Retrieve a property index for everything which is not the global object.</p>
+
+<p>The index returned is the same for all objects.</p>
+
+<p>If the property does not exist yet:</p>
+
+<ul>
+<li>if autoCreate is true, then the property will be created and its index returned.</li>
+<li>if autoCreate is false, then Telemetry.InvalidPropertyIndex will be returned.</li>
+</ul>
+
+<p>To optimize CPU and memory, numeric and text properties are separate in the telemetry manager.</p>
+
+<div class="notices info" ><p><strong>WARNING:</strong> Because numeric and text properties are separate, indexes for numeric and text samples may overlap and cannot be mixed.</p>
+</div>
+
+
+<h4 id="telemetry-getnumericsample-objecthandle-absolutetime-propertyindex">Telemetry.GetNumericSample( objectHandle , absoluteTime , propertyIndex )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<h4 id="telemetry-gettextsample-objecthandle-absolutetime-propertyindex">Telemetry.GetTextSample( objectHandle , absoluteTime , propertyIndex )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Retrieve property numeric or text value at the given time.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        value , validity<br>
+        validity is set to false if the value does not really apply for the given time (typically if the object does not exist at the given time) event when validity is set to false, the value is valid and usable (this simplify the client code)</p>
+</div>
+
+
+<h4 id="telemetry-setnumericsample-objecthandle-absolutetime-propertyindex-value">Telemetry.SetNumericSample( objectHandle , absoluteTime , propertyIndex , value )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<h4 id="telemetry-settextsample-objecthandle-absolutetime-propertyindex-value">Telemetry.SetTextSample( objectHandle , absoluteTime , propertyIndex , value )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Set or re-set given numeric or text property value at the given time.</p>
+
+<p>You can set <strong>absoluteTime</strong> to <strong>Tacview.Telemetry.BeginningOfTime</strong> to declare the properties of timeless objects like waypoints.</p>
+
+<h4 id="telemetry-settransform-objecthandle-absolutetime-transform">Telemetry.SetTransform( objectHandle , absoluteTime , transform )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Set or re-set object position and rotation at the given time.</p>
+
+<p><strong>absoluteTime</strong> is a 64-bit floating point number which represents the number of seconds elapsed to 1970-01-01T00:00:00Z</p>
+
+<p>Injected angles (including longitude and latitude) MUST be normalized between ]-pi,+pi]</p>
+
+<p>Failure to do so may produce undefined results with some formulas.</p>
+
+<p>For performance reasons, angles retrieved by the telemetry manager are <strong>NOT</strong> always normalized between ]-pi,+pi]</p>
+
+<p>Do not forget to normalize angles before displaying then as text to the final user!</p>
+
+<p>&ndash; non specified members will be set to the interpolated value of the preceding and following samples.</p>
+
+<pre><code>transform
+{
+    -- Spherical position
+
+    f64 longitude;      -- (radian) Spherical position (+ is towards east)
+    f64 latitude;       -- (radian) Spherical position (+ is towards north)
+    f32 altitude;       -- (meters) Spherical position
+
+    -- Rotation
+
+    f32 roll;           -- (radian) roll axis rotation
+    f32 pitch;          -- (radian) pitch axis rotation
+    f32 yaw;            -- (radian) yaw axis rotation
+
+    -- Native coordinates, mostly used to get accurate distance and speed calculation for flat world simulators.
+
+    f32 u;              -- (meters) Native x coordinate
+    f32 v;              -- (meters) Native y coordinate
+    f32 heading;        -- (radian) Heading in native coordinates system
+};
+</code></pre>
+
+<h4 id="telemetry-getlifetime-objecthandle">Telemetry.GetLifeTime( objectHandle )</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<p>Return absolute time of the object first appearance and its time of disappearance if applicable.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        lifeTimeBegin, lifeTimeEnd</p>
+</div>
+
+
+<p>If the object exists from the beginning of times (e.g. a bullseye) its <strong>lifeTimeBegin</strong> is <strong>Telemetry.BeginningOfTime</strong>.</p>
+
+<p>If the object has never been destroyed or removed from the battlefield, then <strong>lifeTimeEnd</strong> is <strong>Telemetry.EndOfTime</strong>.</p>
+
+<h4 id="telemetry-setlifetimeend-objecthandle-absolutetime">Telemetry.SetLifeTimeEnd( objectHandle , absoluteTime )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Defines the end-of-life of the specified object.</p>
+
+<p>Typically used to specify when an object has been destroyed or has been removed from the battlefield.</p>
+
+<h4 id="telemetry-deleteobject-objecthandle">Telemetry.DeleteObject( objectHandle )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Remove the specified object from the telemetry manager.</p>
+
+<p>This operation is safe: The corresponding handle will remain valid until the next effective purge (typically when loading a new telemetry file) so the other modules will not crash if they attempt to reference the object afterward.</p>
+
+<p>However, any data related to this object will be freed.</p>
+
+<h4 id="telemetry-getobjectcount">Telemetry.GetObjectCount()</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<p>Retrieve the total number of objects currently active in the telemetry manager.</p>
+
+<p>Typically used to enumerate all objects.</p>
+
+<h4 id="telemetry-getobjecthandlebyindex-index">Telemetry.GetObjectHandleByIndex( index )</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<p>Retrieve an object by its index.
+<div class="notices tip" ><p><strong>NOTE:</strong> The index goes from <strong>0</strong> to <strong>GetObjectCount() - 1</strong>.</p>
+</div>
+</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        The object <strong>handle</strong> or <strong>nil</strong> if the index is out of range.</p>
+</div>
+
+
+<h4 id="telemetry-getobjectid-objecthandle">Telemetry.GetObjectId( objectHandle )</h4>
+
+<p><em>Tacview 1.7.6</em></p>
+
+<p>Retrieve given object id.</p>
+
+<p>Beware that object ids can be recycled and cannot uniquely identify objects.</p>
+
+<p>For that reason, avoid using them, unless it is for telemetry injection (event creation) or export.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/lua-core-interface/context/" title="Context"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/lua-core-interface/terrain/" title="Terrain" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1555266387"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555266387"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555266387"></script>
+    <script src="/js/jquery.sticky.js?1555266387"></script>
+    <script src="/js/featherlight.min.js?1555266387"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555266387"></script>
+    <script src="/js/highlight.pack.js?1555266387"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1555266387"></script>
+    <script src="/js/learn.js?1555266387"></script>
+    <script src="/js/hugo-learn.js?1555266387"></script>
+
+    <link href="/mermaid/mermaid.css?1555266387" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555266387"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

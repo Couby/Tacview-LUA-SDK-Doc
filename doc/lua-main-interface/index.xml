@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LUA Main Interface on Documentation for Hugo Learn Theme</title>
+    <link>http://example.org/lua-main-interface/</link>
+    <description>Recent content in LUA Main Interface on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Apr 2019 18:16:05 +0200</lastBuildDate>
+    
+	<atom:link href="http://example.org/lua-main-interface/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>UI</title>
+      <link>http://example.org/lua-main-interface/ui/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:46 +0200</pubDate>
+      
+      <guid>http://example.org/lua-main-interface/ui/</guid>
+      <description>General functions to manipulate Tacview UI and aspect.
+UI.EnterFullScreen() Tacview 1.7.2
+UI.ExitFullScreen() Tacview 1.7.2
+Enter/exit full screen mode.
+When switched to full screen, Tacview displays only the 3D view in a borderless window.
+This can be useful during an online debriefing, so the user can fully focus his attention on the objects displayed in the 3D view.
+The user can manually switch between full screen and windowed mode by pressing [ALT] + [ENTER].</description>
+    </item>
+    
+    <item>
+      <title>UI.Menus</title>
+      <link>http://example.org/lua-main-interface/ui.menus/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:45 +0200</pubDate>
+      
+      <guid>http://example.org/lua-main-interface/ui.menus/</guid>
+      <description>The Menu interface is useful to create and insert commands and options in Tacview menus.
+All new menus will be added to the addons menu.
+Tacview will automatically remove menu items of an addon which is unloaded.
+UI.Menus.AddMenu( parentMenuId , textLabel ) Tacview 1.7.2
+Creates and inserts a menu in Tacview menu.
+You can specify the id of a parent menu, or you can use nil to insert your menu in Tacview addons main menu.</description>
+    </item>
+    
+    <item>
+      <title>UI.Renderer</title>
+      <link>http://example.org/lua-main-interface/ui.renderer/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:44 +0200</pubDate>
+      
+      <guid>http://example.org/lua-main-interface/ui.renderer/</guid>
+      <description>The renderer is typically used to display objects in the main 3D view.
+NOTE: Drawing functions can be called only during draw events.
+See Events.* for how to register drawing callbacks.
+UI.Renderer.GetWidth() Tacview 1.7.2
+Retrieve the renderer width in pixels or nil when not in a draw event.
+UI.Renderer.GetHeight() Tacview 1.7.2
+Retrieve the renderer height in pixels or nil when not in a draw event.
+UI.Renderer.LoadTexture( texturePath [, wrapRepeat [, compressed] ] ) Tacview 1.</description>
+    </item>
+    
+    <item>
+      <title>Events</title>
+      <link>http://example.org/lua-main-interface/events/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:43 +0200</pubDate>
+      
+      <guid>http://example.org/lua-main-interface/events/</guid>
+      <description>You can register callbacks for different kind of events in Tacview.
+Events.Update.RegisterListener( function ) Tacview 1.7.2
+Once a frame, Tacview will call your function which must match the following signature:
+Update( dt , absoluteTime )
+ dt is the number of seconds elapsed in real life since the last Update() absoluteTime is the current telemetry time in seconds since 1970-01-01 (this parameter is useful to talk with the Telemetry module)  Events.</description>
+    </item>
+    
+    <item>
+      <title>Context</title>
+      <link>http://example.org/lua-main-interface/context/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:42 +0200</pubDate>
+      
+      <guid>http://example.org/lua-main-interface/context/</guid>
+      <description>This contains all the information relative the telemetry representation on screen.
+NOTE: See Lua Core Interface for additional functions.
+Context.GetSelectedObject( objectIndex ) Tacview 1.7.2
+Retrieves the handle of one of the selected objects.
+objectIndex can be either 0 for the primary object or 1 for the secondary object.
+It is currently possible to select two objects at the same time.
+Context.SetSelectedObject( objectIndex , objectHandle ) Tacview 1.7.2
+Choose which object is currently selected.</description>
+    </item>
+    
+    <item>
+      <title>Context.Camera</title>
+      <link>http://example.org/lua-main-interface/context.camera/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:41 +0200</pubDate>
+      
+      <guid>http://example.org/lua-main-interface/context.camera/</guid>
+      <description>The camera is used to define the user point-of-view in the 3D window of Tacview.
+Context.Camera.GetMode() Tacview 1.7.2
+Returns the current camera mode.
+Return value:
+Camera.Cockpit
+Camera.External
+Camera.Satellite
+Camera.Free
+Context.Camera.SetOffset( offsetData ) Tacview 1.7.2
+Temporarily offset camera position and rotation.
+The offset is automatically reset at each new frame when not overridden by an addon.
+The following components can be specified, all of them are optional:
+offsetData = { lateral = meters_positive_to_the_right , longitudinal = meters_positive_forward , vertical = meters_positive_up , roll = radian , pitch = radian , yaw = radian , }  Context.</description>
+    </item>
+    
+    <item>
+      <title>Context.Playback</title>
+      <link>http://example.org/lua-main-interface/context.playback/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:40 +0200</pubDate>
+      
+      <guid>http://example.org/lua-main-interface/context.playback/</guid>
+      <description>Functions to control the playback of loaded telemetry data.
+Context.Playback.Play() Tacview 1.7.6
+Context.Playback.Pause() Tacview 1.7.6
+Resume / pause playback.
+Context.Playback.IsPlaying() Tacview 1.7.6
+Returns false if the playback is currently paused.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="fr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.51" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Math :: Documentation du thème Hugo Learn</title>
+
+    
+    <link href="/css/nucleus.css?1555266387" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555266387" rel="stylesheet">
+    <link href="/css/hybrid.css?1555266387" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555266387" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555266387" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555266387" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1555266387" rel="stylesheet">
+    <link href="/css/theme.css?1555266387" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555266387" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1555266387" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1555266387"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/fr/lua-core-interface/math/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="/"><img src="/logo.png" /></a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Rechercher...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1555266387"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555266387"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/example.org\/\/fr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1555266387"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/fr/lua-core-interface/" title="LUA Core Interface" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/fr/lua-core-interface/">
+          <b>1. </b>LUA Core Interface
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-core-interface/global-functions/" title="Fonctions globales" class="dd-item ">
+        <a href="/fr/lua-core-interface/global-functions/">
+        Fonctions globales
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-core-interface/settings/" title="Paramètres" class="dd-item ">
+        <a href="/fr/lua-core-interface/settings/">
+        Paramètres
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-core-interface/addons/" title="Add Ons" class="dd-item ">
+        <a href="/fr/lua-core-interface/addons/">
+        Add Ons
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-core-interface/log/" title="Log" class="dd-item ">
+        <a href="/fr/lua-core-interface/log/">
+        Log
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-core-interface/ui.messagebox/" title="UI.MessageBox" class="dd-item ">
+        <a href="/fr/lua-core-interface/ui.messagebox/">
+        UI.MessageBox
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-core-interface/math/" title="Math" class="dd-item active">
+        <a href="/fr/lua-core-interface/math/">
+        Math
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-core-interface/context/" title="Contexte" class="dd-item ">
+        <a href="/fr/lua-core-interface/context/">
+        Contexte
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-core-interface/telemetry/" title="Télémétrie" class="dd-item ">
+        <a href="/fr/lua-core-interface/telemetry/">
+        Télémétrie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-core-interface/terrain/" title="Terrain" class="dd-item ">
+        <a href="/fr/lua-core-interface/terrain/">
+        Terrain
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/fr/lua-main-interface/" title="LUA Main Interface" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/fr/lua-main-interface/">
+          <b>2. </b>LUA Main Interface
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-main-interface/ui/" title="UI" class="dd-item ">
+        <a href="/fr/lua-main-interface/ui/">
+        UI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-main-interface/ui.menus/" title="UI.Menus" class="dd-item ">
+        <a href="/fr/lua-main-interface/ui.menus/">
+        UI.Menus
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-main-interface/ui.renderer/" title="UI.Renderer" class="dd-item ">
+        <a href="/fr/lua-main-interface/ui.renderer/">
+        UI.Renderer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-main-interface/events/" title="Evénements" class="dd-item ">
+        <a href="/fr/lua-main-interface/events/">
+        Evénements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-main-interface/context/" title="Context" class="dd-item ">
+        <a href="/fr/lua-main-interface/context/">
+        Context
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-main-interface/context.camera/" title="Context.Camera" class="dd-item ">
+        <a href="/fr/lua-main-interface/context.camera/">
+        Context.Camera
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/fr/lua-main-interface/context.playback/" title="Context.Playback" class="dd-item ">
+        <a href="/fr/lua-main-interface/context.playback/">
+        Context.Playback
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>Aller plus loin</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.tacview.net"><i class='fas fa-fighter-jet'></i> Tacview home</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://example.org/fr/credits"><i class='fas fa-bullhorn'></i> Crédits</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="http://example.org/lua-core-interface/math/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="fr" value="http://example.org/fr/lua-core-interface/math/" selected>Français</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/fr/'></a> > <a href='/fr/lua-core-interface/'>LUA Core Interface</a> > Math
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#math-angle-subtract-leftangle-rightangle">Math.Angle.Subtract( leftAngle , rightAngle )</a></li>
+<li><a href="#math-vector-longitudelatitudetocartesian-longitude-number-latitude-number-altitude-number">Math.Vector.LongitudeLatitudeToCartesian( {longitude = number , latitude = number , altitude = number} )</a></li>
+<li><a href="#math-vector-cartesiantolongitudelatitude-x-number-y-number-z-number">Math.Vector.CartesianToLongitudeLatitude( {x = number , y = number , z = number} )</a></li>
+<li><a href="#math-vector-add-vector1-vector2">Math.Vector.Add( vector1 , vector2 )</a></li>
+<li><a href="#math-vector-subtract-vector1-vector2">Math.Vector.Subtract( vector1 , vector2 )</a></li>
+<li><a href="#math-vector-multiply-factor-vector">Math.Vector.Multiply( factor , vector )</a></li>
+<li><a href="#math-vector-normalize-vector">Math.Vector.Normalize( vector )</a></li>
+<li><a href="#math-vector-anglebetween-vector1-vector2">Math.Vector.AngleBetween( vector1 , vector2 )</a></li>
+<li><a href="#math-vector-anglebetween-vector-referencevector1-referencevector2">Math.Vector.AngleBetween( vector , referenceVector1 , referenceVector2 )</a></li>
+<li><a href="#math-vector-localtoglobal-objecttransform-localcoordinates">Math.Vector.LocalToGlobal( objectTransform , localCoordinates )</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Math
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>Ce module contient tous les outils nécessaires pour convertir et modifier les données typiques de la télémétrie.</p>
+
+<p>Ici, nous appelons vecteurs, des tables comprenant trois composantes :</p>
+
+<pre><code>{
+    x = nombre,
+    y = nombre,
+    z = nombre,
+}
+</code></pre>
+
+<h4 id="math-angle-subtract-leftangle-rightangle">Math.Angle.Subtract( leftAngle , rightAngle )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Soustraction entre deux angles en radian.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    Différence entre <strong>leftAngle</strong> et <strong>rightAngle</strong>.<br>
+    Le résultat est normalisé entre <strong>[-pi, +pi]</strong>.</p>
+</div>
+
+
+<h4 id="math-vector-longitudelatitudetocartesian-longitude-number-latitude-number-altitude-number">Math.Vector.LongitudeLatitudeToCartesian( {longitude = number , latitude = number , altitude = number} )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Convertis des coordonnées sphériques terrestres en coordonnées cartésiennes.
+Il est possible de directement donner une transformée d&rsquo;objet à cette fonction, voir <a href="/telemetry/#telemetry-getcurrenttransform-objecthandle-tacview-1-7-2">Telemetry.GetCurrentTransform</a>.</p>
+
+<p><strong>Longitude</strong> et <strong>latitude</strong> sont en radian.
+<strong>Altitude</strong> est en mètres.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    Un <strong>vecteur</strong> représentant une position cartésienne dans l&rsquo;espace terrien global.</p>
+</div>
+
+
+<h4 id="math-vector-cartesiantolongitudelatitude-x-number-y-number-z-number">Math.Vector.CartesianToLongitudeLatitude( {x = number , y = number , z = number} )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Convertis des coordonnées cartésiennes en coordonnées sphériques terrestres.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    Une <strong>table</strong> contenant { longitude = &hellip; , latitude = &hellip; , altitude = &hellip;}<br>
+    Longitude et latitude sont en radian.<br>
+    Altitude est en mètres.</p>
+</div>
+
+
+<h4 id="math-vector-add-vector1-vector2">Math.Vector.Add( vector1 , vector2 )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Somme de deux vecteurs 3D.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    Un <strong>vecteur</strong> représentant la somme de <strong>vector1</strong> et <strong>vector2</strong>.</p>
+</div>
+
+
+<h4 id="math-vector-subtract-vector1-vector2">Math.Vector.Subtract( vector1 , vector2 )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Différence entre deux veteurs 3D.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    Un <strong>vecteur</strong> représentant la différence entre <strong>vector1</strong> et <strong>vector2</strong>.</p>
+</div>
+
+
+<h4 id="math-vector-multiply-factor-vector">Math.Vector.Multiply( factor , vector )</h4>
+
+<p><em>Tacview 1.7.5</em></p>
+
+<p>Multiplie un vecteur désigné par une valeur scalaire.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    La <strong>vector</strong> mis à l&rsquo;échelle.</p>
+</div>
+
+
+<h4 id="math-vector-normalize-vector">Math.Vector.Normalize( vector )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Normalise un vecteur donné.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    <strong>vector</strong> normalisé.<br>
+    Cette fonction est sûre, aussi un vecteur nul indique que le vecteur est nul.</p>
+</div>
+
+
+<h4 id="math-vector-anglebetween-vector1-vector2">Math.Vector.AngleBetween( vector1 , vector2 )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Calcule l&rsquo;angle entre deux vecteurs <em>normalisés</em>.
+<div class="notices info" ><p>NE PAS oublier de normaliser les vecteurs avant l&rsquo;appel GetAngle!</p>
+</div>
+
+<div class="notices tip" ><p>NOTE : Si vous souhaitez un calcul quadran exact, vous devriez plutôt utiliser la fonction à trois paramètres.</p>
+</div>
+</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    <strong>Angle</strong> en radian entre les deux vecteurs donnés.<br>
+    Cela correspond à <code>ArcCos( DotProduct( vector1, vector2 ) )</code></p>
+</div>
+
+
+<h4 id="math-vector-anglebetween-vector-referencevector1-referencevector2">Math.Vector.AngleBetween( vector , referenceVector1 , referenceVector2 )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Calcule l&rsquo;angle entre deux vecteurs <em>normalisés</em>.
+<div class="notices info" ><p>NE PAS oublier de normaliser les vecteurs avant l&rsquo;appel GetAngle!</p>
+</div>
+
+Contrairement à <strong>AngleBetween( vector1 , vector2 )</strong>, cette fonction donne le quadran exact.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    <strong>Angle</strong> en radian entre les deux vecteurs donnés.<br>
+    Cela correspond à <code>ArcTan( DotProduct( vector, referenceVector1 ), DotProduct( vector, referenceVector2 ) )</code></p>
+</div>
+
+
+<h4 id="math-vector-localtoglobal-objecttransform-localcoordinates">Math.Vector.LocalToGlobal( objectTransform , localCoordinates )</h4>
+
+<p><em>Tacview 1.7.2</em></p>
+
+<p>Convertis le point donné des coordonnées d&rsquo;un objet local en coordonnées cartésiennes terrestres.</p>
+
+<p>Vous pouvez directement passer en argument de cette fonction, la table <strong>objectTransform</strong> provenant de <strong>Telemetry.GetCurrentTransform()</strong> dans laquelle <strong>localCoordinates</strong> est un vecteur.</p>
+
+<pre><code>objectTransform =
+{
+    -- Si xyz ne sont pas précisés, ils seront calculés à partir des informations longitude, latitude, et altitude.
+
+    x = cartesianPositionX,                 -- mètres
+    y = cartesianPositionY,                 -- mètres
+    z = cartesianPositionZ,                 -- mètres
+
+    -- Si longitude ou latitude n'est pas précisé, ils sont calculés à partir du xyz.
+
+    longitude = sphericalLongitude,         -- radian
+    latitude = sphericalLatitude,           -- radian
+    altitude = absoluteAltitude,            -- (mètres) requis seulement si xyz n'est pas spécifié
+
+    roll = objectRoll,                      -- radian
+    pitch = objectPitch,                    -- radian
+    yaw = objectYaw,                        -- radian
+}
+</code></pre>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    <strong>coordonnées comme vecteur</strong> dans l&rsquo;espace global cartésien terrestre.<br>
+    retourne <strong>nil</strong> dans le cas où la quantité d&rsquo;information fournie n&rsquo;est pas suffisante.</p>
+</div>
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/fr/lua-core-interface/ui.messagebox/" title="UI.MessageBox"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/fr/lua-core-interface/context/" title="Contexte" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1555266387"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555266387"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555266387"></script>
+    <script src="/js/jquery.sticky.js?1555266387"></script>
+    <script src="/js/featherlight.min.js?1555266387"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555266387"></script>
+    <script src="/js/highlight.pack.js?1555266387"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1555266387"></script>
+    <script src="/js/learn.js?1555266387"></script>
+    <script src="/js/hugo-learn.js?1555266387"></script>
+
+    <link href="/mermaid/mermaid.css?1555266387" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555266387"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

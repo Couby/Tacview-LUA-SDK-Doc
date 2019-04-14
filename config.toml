@@ -43,12 +43,12 @@ home = [ "HTML", "RSS", "JSON"]
 
   [Languages]
   [Languages.en]
-  title = "Documentation for Hugo Learn Theme"
+  title = "Tacview Lua SDK Doc"
   weight = 1
   languageName = "English"
 
   [Languages.fr]
-  title = "Documentation du thème Hugo Learn"
+  title = "Tacview Lua SDK Doc"
   weight = 2
   languageName = "Français"
 

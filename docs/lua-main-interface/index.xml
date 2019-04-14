@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LUA Main Interface on Documentation for Hugo Learn Theme</title>
-    <link>http://example.org/lua-main-interface/</link>
+    <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/</link>
     <description>Recent content in LUA Main Interface on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Apr 2019 18:16:05 +0200</lastBuildDate>
     
-	<atom:link href="http://example.org/lua-main-interface/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>UI</title>
-      <link>http://example.org/lua-main-interface/ui/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:46 +0200</pubDate>
       
-      <guid>http://example.org/lua-main-interface/ui/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui/</guid>
       <description>General functions to manipulate Tacview UI and aspect.
 UI.EnterFullScreen() Tacview 1.7.2
 UI.ExitFullScreen() Tacview 1.7.2
@@ -28,10 +28,10 @@ The user can manually switch between full screen and windowed mode by pressing [
     
     <item>
       <title>UI.Menus</title>
-      <link>http://example.org/lua-main-interface/ui.menus/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.menus/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:45 +0200</pubDate>
       
-      <guid>http://example.org/lua-main-interface/ui.menus/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.menus/</guid>
       <description>The Menu interface is useful to create and insert commands and options in Tacview menus.
 All new menus will be added to the addons menu.
 Tacview will automatically remove menu items of an addon which is unloaded.
@@ -42,10 +42,10 @@ You can specify the id of a parent menu, or you can use nil to insert your menu 
     
     <item>
       <title>UI.Renderer</title>
-      <link>http://example.org/lua-main-interface/ui.renderer/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.renderer/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:44 +0200</pubDate>
       
-      <guid>http://example.org/lua-main-interface/ui.renderer/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.renderer/</guid>
       <description>The renderer is typically used to display objects in the main 3D view.
 NOTE: Drawing functions can be called only during draw events.
 See Events.* for how to register drawing callbacks.
@@ -58,10 +58,10 @@ UI.Renderer.LoadTexture( texturePath [, wrapRepeat [, compressed] ] ) Tacview 1.
     
     <item>
       <title>Events</title>
-      <link>http://example.org/lua-main-interface/events/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/events/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:43 +0200</pubDate>
       
-      <guid>http://example.org/lua-main-interface/events/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/events/</guid>
       <description>You can register callbacks for different kind of events in Tacview.
 Events.Update.RegisterListener( function ) Tacview 1.7.2
 Once a frame, Tacview will call your function which must match the following signature:
@@ -71,10 +71,10 @@ Update( dt , absoluteTime )
     
     <item>
       <title>Context</title>
-      <link>http://example.org/lua-main-interface/context/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/context/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:42 +0200</pubDate>
       
-      <guid>http://example.org/lua-main-interface/context/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/context/</guid>
       <description>This contains all the information relative the telemetry representation on screen.
 NOTE: See Lua Core Interface for additional functions.
 Context.GetSelectedObject( objectIndex ) Tacview 1.7.2
@@ -87,10 +87,10 @@ Choose which object is currently selected.</description>
     
     <item>
       <title>Context.Camera</title>
-      <link>http://example.org/lua-main-interface/context.camera/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/context.camera/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:41 +0200</pubDate>
       
-      <guid>http://example.org/lua-main-interface/context.camera/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/context.camera/</guid>
       <description>The camera is used to define the user point-of-view in the 3D window of Tacview.
 Context.Camera.GetMode() Tacview 1.7.2
 Returns the current camera mode.
@@ -108,10 +108,10 @@ offsetData = { lateral = meters_positive_to_the_right , longitudinal = meters_po
     
     <item>
       <title>Context.Playback</title>
-      <link>http://example.org/lua-main-interface/context.playback/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/context.playback/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:40 +0200</pubDate>
       
-      <guid>http://example.org/lua-main-interface/context.playback/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/context.playback/</guid>
       <description>Functions to control the playback of loaded telemetry data.
 Context.Playback.Play() Tacview 1.7.6
 Context.Playback.Pause() Tacview 1.7.6

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LUA Core Interface on Documentation for Hugo Learn Theme</title>
-    <link>http://example.org/lua-core-interface/</link>
+    <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/</link>
     <description>Recent content in LUA Core Interface on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Apr 2019 18:16:05 +0200</lastBuildDate>
     
-	<atom:link href="http://example.org/lua-core-interface/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Global functions</title>
-      <link>http://example.org/lua-core-interface/global-functions/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/global-functions/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:54 +0200</pubDate>
       
-      <guid>http://example.org/lua-core-interface/global-functions/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/global-functions/</guid>
       <description> Close() Tacview 1.7.2
 Unconditionally closes the application.
 NOTE: this function does not ask the user to save his work.
@@ -25,10 +25,10 @@ NOTE: this function does not ask the user to save his work.
     
     <item>
       <title>Settings</title>
-      <link>http://example.org/lua-core-interface/settings/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/settings/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:53 +0200</pubDate>
       
-      <guid>http://example.org/lua-core-interface/settings/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/settings/</guid>
       <description>This interface is provided to access Tacview configuration. If you want to save and load settings for your own addon, see AddOns.Current.Settings
 Settings.SetBoolean( settingPath, newBooleanValue ) Tacview 1.7.2
 Save a Boolean setting under the given name.
@@ -38,10 +38,10 @@ settingPath can be one of the following:
     
     <item>
       <title>Add Ons</title>
-      <link>http://example.org/lua-core-interface/addons/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/addons/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:52 +0200</pubDate>
       
-      <guid>http://example.org/lua-core-interface/addons/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/addons/</guid>
       <description>The add-ons interface is mainly used to specify information about your add-on.
 Your addon settings will be saved and restored at the next session of Tacview.
 AddOns.Current.GetPath() Tacview 1.7.4
@@ -54,10 +54,10 @@ AddOn path (e.g. C:\ProgramData\Tacview\AddOns\Tutorial 1 - Hello World - CS\)</
     
     <item>
       <title>Log</title>
-      <link>http://example.org/lua-core-interface/log/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/log/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:51 +0200</pubDate>
       
-      <guid>http://example.org/lua-core-interface/log/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/log/</guid>
       <description>The log module is typically used to log messages and errors which can be used to diagnose specific issues.
 All strings sent to the log will also be saved in the %TEMP%\Tacview.log file.
 Please, use the log wisely and try to display only meaningful messages to the end-user.
@@ -66,10 +66,10 @@ Do not spam the log with internal development messages, this may confuse the use
     
     <item>
       <title>UI.MessageBox</title>
-      <link>http://example.org/lua-core-interface/ui.messagebox/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/ui.messagebox/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:50 +0200</pubDate>
       
-      <guid>http://example.org/lua-core-interface/ui.messagebox/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/ui.messagebox/</guid>
       <description>Message boxes can be used to display modal notifications and ask for simple questions to the user.
 It is suggested to not use too many message boxes as they are breaking the productivity flow of the user.
 Whenever possible, you can use the log to output most of you messages and rely on settings to choose the appropriate behavior depending on the circumstances.
@@ -79,10 +79,10 @@ UI.MessageBox.Error( textMessage ) Tacview 1.</description>
     
     <item>
       <title>Math</title>
-      <link>http://example.org/lua-core-interface/math/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/math/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:49 +0200</pubDate>
       
-      <guid>http://example.org/lua-core-interface/math/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/math/</guid>
       <description>This module contains all the necessary tools to convert and modify typical telemetry data.
 Here, we are calling vectors, tables with three components:
 { x = number, y = number, z = number, }  Math.Angle.Subtract( leftAngle , rightAngle ) Tacview 1.7.2
@@ -95,10 +95,10 @@ The result is normalized to [-pi, +pi].
     
     <item>
       <title>Context</title>
-      <link>http://example.org/lua-core-interface/context/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/context/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:48 +0200</pubDate>
       
-      <guid>http://example.org/lua-core-interface/context/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/context/</guid>
       <description>This contains all the information relative the telemetry representation on screen. NOTE: See Lua Main Interface for additional functions.
 Context.GetAbsoluteTime() Tacview 1.7.5
 Retrieves the current telemetry time in seconds since 1970-01-01 (this parameter is useful to talk with the Telemetry module).
@@ -109,10 +109,10 @@ NOTE: DO NOT force the time at every frame, especially during real-time telemetr
     
     <item>
       <title>Telemetry</title>
-      <link>http://example.org/lua-core-interface/telemetry/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/telemetry/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:47 +0200</pubDate>
       
-      <guid>http://example.org/lua-core-interface/telemetry/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/telemetry/</guid>
       <description>This module is the heart of Tacview.
 Use the telemetry manager to read and write any data for any dynamic object.
 Telemetry.BeginningOfTime Tacview 1.7.5
@@ -128,10 +128,10 @@ Enumeration of bits used to defined object types.
     
     <item>
       <title>Terrain</title>
-      <link>http://example.org/lua-core-interface/terrain/</link>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/terrain/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:46 +0200</pubDate>
       
-      <guid>http://example.org/lua-core-interface/terrain/</guid>
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/terrain/</guid>
       <description>The following functions can be used to customize the terrain as well as to retrieve some information about it.
 Terrain.GetElevation( longitude , latitude ) Tacview 1.7.5
 Retrieve given point elevation in meter. Longitude and latitude are in radian.</description>

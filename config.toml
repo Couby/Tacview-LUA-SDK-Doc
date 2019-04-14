@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://couby.github.io/Tacview-LUA-SDK-Doc/"
 languageCode = "en-us"
-title = "Tacview AddOn Doc"
+title = "Tacview Lua SDK Doc"
 
 # Modifiez le thème pour qu'il soit utilisé par défaut à chaque génération de site.
 theme = "hugo-theme-learn"
@@ -13,7 +13,7 @@ home = [ "HTML", "RSS", "JSON"]
   # L'URL préfixe pour éditer la page courante. Ce paramètre affichera un bouton "Modifier cette page" on haut de de chacune des pages.
   # Pratique pour donner les possibilité à vos utilisateurs de créer une merge request pour votre doc.
   # Allez voir le fichier config.toml de cette documentation pour avoir un exemple.
-  editURL = ""
+  editURL = "https://github.com/Couby/Tacview-LUA-SDK-Doc/edit/master/content/"
   # Autheur du site, est utilisé dans les informations meta
   author = ""
   # Description du site, est utilisé dans les informations meta

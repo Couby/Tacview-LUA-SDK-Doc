@@ -13,9 +13,15 @@ Utilisez le gestionnaire de télémétrie pour lire et écrire des données pour
 #### Telemetry.EndOfTime
 *Tacview 1.7.5*
 
-Constantes utilisées pour spécifier les marqueurs de temps spéciaux.
+Constantes utilisées pour spécifier deux marqueurs de temps spéciaux.
+
+	BeginningOfTime = -3.4028234663853e+38
+	EndOfTime = 3.4028234663853e+38
 
 **BeginningOfTime** est typiquement utilisé pour créer des objets intemporels comme les waypoints ou les bâtiments.
+**EndOfTime** est utile par exemple pour identifier les objets encore vivants en fin d'enregistrement de télémétrie.
+
+Si vous avec besoin de connaître l'horodatage des débuts et fin d'enregistrement de la télémétrie, regarder la fonction [Telemetry.GetDataTimeRange()](/Tacview-LUA-SDK-Doc/fr/lua-core-interface/telemetry/#telemetry-getdatatimerange)
 
 
 #### Telemetry.InvalidPropertyIndex
@@ -55,6 +61,14 @@ Constante utilisée pour détecter des propriétés invalides.
 
 		Telemetry.Tags.Bullseye
 		Telemetry.Tags.Waypoint
+
+Cas d'usage pour identifier si un objet est de type avion :
+
+	local objectTags = Tacview.Telemetry.GetCurrentTags( objectHandle )
+
+	if (Tacview.Telemetry.AllGivenTagsActive(objectTags, Tacview.Telemetry.Tags.FixedWing)) then
+	    this_is_a_plane;
+	end
 
 
 #### Telemetry.Property

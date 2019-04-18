@@ -13,9 +13,15 @@ Use the telemetry manager to read and write any data for any dynamic object.
 #### Telemetry.EndOfTime
 *Tacview 1.7.5*
 
-Constants used to specify special time stamps.
+Constants used to specify two special time stamps.
+
+	BeginningOfTime = -3.4028234663853e+38
+	EndOfTime = 3.4028234663853e+38
 
 **BeginningOfTime** is typically used to create timeless objects like waypoints or buildings.
+**EndOfTime** is usefull for exemple to identify objects still alive at the end of telemetry recording.
+
+If you need the timestamp of telemetry recording start or end, check [Telemetry.GetDataTimeRange()](/Tacview-LUA-SDK-Doc/lua-core-interface/telemetry/#telemetry-getdatatimerange)
 
 
 #### Telemetry.InvalidPropertyIndex
@@ -55,6 +61,14 @@ Enumeration of bits used to defined object types.
 
 		Telemetry.Tags.Bullseye
 		Telemetry.Tags.Waypoint
+
+Use case exemple to identify an object type as airplane :
+
+	local objectTags = Tacview.Telemetry.GetCurrentTags( objectHandle )
+
+	if (Tacview.Telemetry.AllGivenTagsActive(objectTags, Tacview.Telemetry.Tags.FixedWing)) then
+	    this_is_a_plane;
+	end
 
 
 #### Telemetry.Property

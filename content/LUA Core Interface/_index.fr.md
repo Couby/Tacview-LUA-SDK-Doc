@@ -9,7 +9,7 @@ pre = "<b>1. </b>"
 ---
 
 #	Tacview 1.7.6 Lua Core Interface
-##	Dernière mise à jour : 27-02-2019
+##	Dernière mise à jour : 18-04-2019
 
 ---
 

@@ -12,20 +12,20 @@
     <title>Télémétrie :: Tacview Lua SDK Doc</title>
 
     
-    <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/fontawesome-all.min.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/hybrid.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/featherlight.min.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/perfect-scrollbar.min.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/auto-complete.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/atom-one-dark-reasonable.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/theme.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/hugo-theme.css?1555270420" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/fontawesome-all.min.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/hybrid.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/featherlight.min.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/perfect-scrollbar.min.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/auto-complete.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/atom-one-dark-reasonable.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/theme.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/hugo-theme.css?1555616577" rel="stylesheet">
     
-      <link href="/Tacview-LUA-SDK-Doc/css/theme-blue.css?1555270420" rel="stylesheet">
+      <link href="/Tacview-LUA-SDK-Doc/css/theme-blue.css?1555616577" rel="stylesheet">
     
 
-    <script src="/Tacview-LUA-SDK-Doc/js/jquery-3.3.1.min.js?1555270420"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/jquery-3.3.1.min.js?1555616577"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/lunr.min.js?1555270420"></script>
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/auto-complete.js?1555270420"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/lunr.min.js?1555616577"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/auto-complete.js?1555616577"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/couby.github.io\/Tacview-LUA-SDK-Doc\/\/fr";
     
 </script>
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/search.js?1555270420"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/search.js?1555616577"></script>
 
     
   </div>
@@ -591,6 +591,8 @@
 <li><a href="#telemetry-endoftime">Telemetry.EndOfTime</a></li>
 <li><a href="#telemetry-invalidpropertyindex">Telemetry.InvalidPropertyIndex</a></li>
 <li><a href="#telemetry-tags">Telemetry.Tags</a></li>
+<li><a href="#telemetry-allgiventagsactive-objecttags-activetagscombination">Telemetry.AllGivenTagsActive( objectTags , activeTagsCombination )</a></li>
+<li><a href="#telemetry-anygiventagactive-objecttags-activetagscombination">Telemetry.AnyGivenTagActive( objectTags , activeTagsCombination )</a></li>
 <li><a href="#telemetry-property">Telemetry.Property</a></li>
 <li><a href="#telemetry-clear">Telemetry.Clear()</a></li>
 <li><a href="#telemetry-isempty">Telemetry.IsEmpty()</a></li>
@@ -612,9 +614,17 @@
 <li><a href="#telemetry-gettextsample-objecthandle-absolutetime-propertyindex">Telemetry.GetTextSample( objectHandle , absoluteTime , propertyIndex )</a></li>
 <li><a href="#telemetry-setnumericsample-objecthandle-absolutetime-propertyindex-value">Telemetry.SetNumericSample( objectHandle , absoluteTime , propertyIndex , value )</a></li>
 <li><a href="#telemetry-settextsample-objecthandle-absolutetime-propertyindex-value">Telemetry.SetTextSample( objectHandle , absoluteTime , propertyIndex , value )</a></li>
+<li><a href="#telemetry-getnumericsamplecount-objecthandle-propertyindex">Telemetry.GetNumericSampleCount( objectHandle , propertyIndex )</a></li>
+<li><a href="#telemetry-gettextsamplecount-objecthandle-propertyindex">Telemetry.GetTextSampleCount( objectHandle , propertyIndex )</a></li>
+<li><a href="#telemetry-getnumericsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.GetNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</a></li>
+<li><a href="#telemetry-gettextsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.GetTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</a></li>
 <li><a href="#telemetry-settransform-objecthandle-absolutetime-transform">Telemetry.SetTransform( objectHandle , absoluteTime , transform )</a></li>
 <li><a href="#telemetry-getlifetime-objecthandle">Telemetry.GetLifeTime( objectHandle )</a></li>
 <li><a href="#telemetry-setlifetimeend-objecthandle-absolutetime">Telemetry.SetLifeTimeEnd( objectHandle , absoluteTime )</a></li>
+<li><a href="#telemetry-removenumericsample-objecthandle-absolutetime-propertyindex">Telemetry.RemoveNumericSample( objectHandle , absoluteTime , propertyIndex )</a></li>
+<li><a href="#telemetry-removenumericsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.RemoveNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</a></li>
+<li><a href="#telemetry-removetextsample-objecthandle-absolutetime-propertyindex">Telemetry.RemoveTextSample( objectHandle , absoluteTime , propertyIndex )</a></li>
+<li><a href="#telemetry-removetextsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.RemoveTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</a></li>
 <li><a href="#telemetry-deleteobject-objecthandle">Telemetry.DeleteObject( objectHandle )</a></li>
 <li><a href="#telemetry-getobjectcount">Telemetry.GetObjectCount()</a></li>
 <li><a href="#telemetry-getobjecthandlebyindex-index">Telemetry.GetObjectHandleByIndex( index )</a></li>
@@ -661,9 +671,16 @@
 
 <p><em>Tacview 1.7.5</em></p>
 
-<p>Constantes utilisées pour spécifier les marqueurs de temps spéciaux.</p>
+<p>Constantes utilisées pour spécifier deux marqueurs de temps spéciaux.</p>
 
-<p><strong>BeginningOfTime</strong> est typiquement utilisé pour créer des objets intemporels comme les waypoints ou les bâtiments.</p>
+<pre><code>BeginningOfTime = -3.4028234663853e+38
+EndOfTime = 3.4028234663853e+38
+</code></pre>
+
+<p><strong>BeginningOfTime</strong> est typiquement utilisé pour créer des objets intemporels comme les waypoints ou les bâtiments.
+<strong>EndOfTime</strong> est utile par exemple pour identifier les objets encore vivants en fin d&rsquo;enregistrement de télémétrie.</p>
+
+<p>Si vous avec besoin de connaître l&rsquo;horodatage des débuts et fin d&rsquo;enregistrement de la télémétrie, regarder la fonction <a href="/Tacview-LUA-SDK-Doc/fr/lua-core-interface/telemetry/#telemetry-getdatatimerange">Telemetry.GetDataTimeRange()</a></p>
 
 <h4 id="telemetry-invalidpropertyindex">Telemetry.InvalidPropertyIndex</h4>
 
@@ -677,7 +694,26 @@
 
 <p>Énumération des bits utilisés pour définir les types d&rsquo;objets.</p>
 
-<pre><code>    -- Types basiques
+<pre><code>    -- Domain
+
+    Telemetry.Tags.Air
+    Telemetry.Tags.Ground
+    Telemetry.Tags.Sea
+
+    Telemetry.Tags.Weapon
+    Telemetry.Tags.Sensor
+    Telemetry.Tags.Navaid
+    Telemetry.Tags.Misc
+
+    -- Attributes
+
+    Telemetry.Tags.Static
+    Telemetry.Tags.Heavy
+    Telemetry.Tags.Medium
+    Telemetry.Tags.Light
+    Telemetry.Tags.Minor
+
+    -- Types basiques
 
     Telemetry.Tags.FixedWing
     Telemetry.Tags.Rotorcraft
@@ -703,7 +739,54 @@
 
     Telemetry.Tags.Bullseye
     Telemetry.Tags.Waypoint
+
+    -- Specific Type
+
+    Telemetry.Tags.Tank
+    Telemetry.Tags.Warship
+    Telemetry.Tags.AircraftCarrier
+    Telemetry.Tags.Submarine
+    Telemetry.Tags.Infantry
+    Telemetry.Tags.Parachutist
+
+    Telemetry.Tags.Shell
+    Telemetry.Tags.Bullet
+
+    Telemetry.Tags.Flare
+    Telemetry.Tags.Chaff
+    Telemetry.Tags.SmokeGrenade
+
+    Telemetry.Tags.Aerodrome
+
+    Telemetry.Tags.Container
+    Telemetry.Tags.Shrapnel
+    Telemetry.Tags.Explosion
 </code></pre>
+
+<p>Cas d&rsquo;usage pour identifier si un objet est de type avion :</p>
+
+<pre><code>local objectTags = Tacview.Telemetry.GetCurrentTags( objectHandle )
+
+if (Tacview.Telemetry.AllGivenTagsActive(objectTags, Tacview.Telemetry.Tags.FixedWing)) then
+    this_is_a_plane;
+end
+</code></pre>
+
+<h4 id="telemetry-allgiventagsactive-objecttags-activetagscombination">Telemetry.AllGivenTagsActive( objectTags , activeTagsCombination )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<h4 id="telemetry-anygiventagactive-objecttags-activetagscombination">Telemetry.AnyGivenTagActive( objectTags , activeTagsCombination )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Aides pour savoir si tout ou partie de combinaisons de tags correspond aux tags d&rsquo;un objet donné.
+Vous retrouvez les tags actuels d&rsquo;un objets (qui définissent le type de l&rsquo;objet) avec la fonction <a href="/Tacview-LUA-SDK-Doc/fr/lua-core-interface/telemetry/#telemetry-getcurrenttags-objecthandle">Telemetry.GetCurrentTags</a>.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        true or false depending on the match</p>
+</div>
+
 
 <h4 id="telemetry-property">Telemetry.Property</h4>
 
@@ -981,7 +1064,35 @@ Renvoie le tag de l&rsquo;objet indiqué sous forme de champ de bits.</p>
 
 <p>Définir ou redéfinir une valeur numérique ou une propriété de texte donnée à un moment donné.</p>
 
-<p>Vous pouvez définir ** absoluteTime ** sur ** Tacview.Telemetry.BeginningOfTime ** pour déclarer les propriétés des objets intemporels tels que les waypoints.</p>
+<p>Vous pouvez définir <strong>absoluteTime</strong> sur <strong>Tacview.Telemetry.BeginningOfTime</strong> pour déclarer les propriétés des objets intemporels tels que les waypoints.</p>
+
+<h4 id="telemetry-getnumericsamplecount-objecthandle-propertyindex">Telemetry.GetNumericSampleCount( objectHandle , propertyIndex )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<h4 id="telemetry-gettextsamplecount-objecthandle-propertyindex">Telemetry.GetTextSampleCount( objectHandle , propertyIndex )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Récupère le nombre d&rsquo;échantillons actuellement chargés en mémoire pour l&rsquo;objet spécifié.
+Cette fonction est généralement utilisée pour énumérer les échantillons d&rsquo;objets.</p>
+
+<h4 id="telemetry-getnumericsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.GetNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<h4 id="telemetry-gettextsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.GetTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Récupérer une donnée de télémétrie d&rsquo;objet spécifique à partir de son index.
+SampleIndex commence à 0 et se termine au compte-1.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        sampleValue , sampleTime , validity<br>
+        Retourne nil si invalide</p>
+</div>
+
 
 <h4 id="telemetry-settransform-objecthandle-absolutetime-transform">Telemetry.SetTransform( objectHandle , absoluteTime , transform )</h4>
 
@@ -1045,6 +1156,30 @@ Renvoie le tag de l&rsquo;objet indiqué sous forme de champ de bits.</p>
 <p>Définit la fin de vie de l&rsquo;objet spécifié.</p>
 
 <p>Généralement utilisé pour spécifier quand un objet a été détruit ou a été retiré du champ de bataille.</p>
+
+<h4 id="telemetry-removenumericsample-objecthandle-absolutetime-propertyindex">Telemetry.RemoveNumericSample( objectHandle , absoluteTime , propertyIndex )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<h4 id="telemetry-removenumericsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.RemoveNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<h4 id="telemetry-removetextsample-objecthandle-absolutetime-propertyindex">Telemetry.RemoveTextSample( objectHandle , absoluteTime , propertyIndex )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<h4 id="telemetry-removetextsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.RemoveTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Supprimer la valeur de l&rsquo;échantillon à l&rsquo;heure ou à l&rsquo;index spécifié.</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+        true si l&rsquo;opération de suppression s&rsquo;est bien passée<br>
+        false si l&rsquo;un des paramètres est obsolète (en raison d&rsquo;un changement de télémétrie en temps réel, par exemple)</p>
+</div>
+
 
 <h4 id="telemetry-deleteobject-objecthandle">Telemetry.DeleteObject( objectHandle )</h4>
 
@@ -1438,20 +1573,20 @@ Renvoie le tag de l&rsquo;objet indiqué sous forme de champ de bits.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/Tacview-LUA-SDK-Doc/js/clipboard.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.jquery.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/jquery.sticky.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/featherlight.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/html5shiv-printshiv.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/highlight.pack.js?1555270420"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/clipboard.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.jquery.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/jquery.sticky.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/featherlight.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/html5shiv-printshiv.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/highlight.pack.js?1555616577"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/Tacview-LUA-SDK-Doc/js/modernizr.custom-3.6.0.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/learn.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/hugo-learn.js?1555270420"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/modernizr.custom-3.6.0.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/learn.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/hugo-learn.js?1555616577"></script>
 
-    <link href="/Tacview-LUA-SDK-Doc/mermaid/mermaid.css?1555270420" type="text/css" rel="stylesheet" />
-    <script src="/Tacview-LUA-SDK-Doc/mermaid/mermaid.js?1555270420"></script>
+    <link href="/Tacview-LUA-SDK-Doc/mermaid/mermaid.css?1555616577" type="text/css" rel="stylesheet" />
+    <script src="/Tacview-LUA-SDK-Doc/mermaid/mermaid.js?1555616577"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

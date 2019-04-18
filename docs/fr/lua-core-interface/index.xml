@@ -33,7 +33,7 @@ NOTE : cette fonction ne demande pas à l&amp;rsquo;utilisateur de sauvegarder s
 Settings.SetBoolean( settingPath, newBooleanValue ) Tacview 1.7.2
 Sauvegarde un réglage Booléen sous le nom donnée.
 settingPath peut prendre une des valeurs suivantes :
- &amp;quot;UI.View.Grid.Visible&amp;quot; &amp;ndash; Active/désactive la grille latitude/longitude &amp;quot;UI.View.HUD.Visible&amp;quot; &amp;ndash; Active/désactive le head-up-display du cockpit &amp;quot;UI.View.Overlay.Visible&amp;quot; &amp;ndash; Active/désactive la surcouche d&amp;rsquo;informations affichée sur la vue 3D  Settings.</description>
+ &amp;quot;UI.View.Grid.Visible&amp;quot; &amp;ndash; Active/désactive la grille latitude/longitude &amp;quot;UI.View.HUD.Visible&amp;quot; &amp;ndash; Active/désactive le head-up-display du cockpit &amp;quot;UI.View.Overlay.Visible&amp;quot; &amp;ndash; Active/désactive la surcouche d&amp;rsquo;informations affichée sur la vue 3D &amp;quot;UI.View.Camera.Dogfight.Enabled&amp;quot; &amp;ndash; Active/désactive le mode caméra dogfight (lorsqu&amp;rsquo;en vue externe)  Settings.</description>
     </item>
     
     <item>
@@ -86,7 +86,7 @@ Soustraction entre deux angles en radian.
 Valeur retournée :
 Différence entre leftAngle et rightAngle.
 Le résultat est normalisé entre [-pi, +pi].
-Math.Vector.LongitudeLatitudeToCartesian( {longitude = number , latitude = number , altitude = number} ) Tacview 1.</description>
+Math.Units.FeetToMeters( value ) Tacview 1.</description>
     </item>
     
     <item>
@@ -112,12 +112,8 @@ Règle le temps courant de la télémétrie pour le rejeu des données en second
 Utilisez le gestionnaire de télémétrie pour lire et écrire des données pour tout objet dynamique.
 Telemetry.BeginningOfTime Tacview 1.7.5
 Telemetry.EndOfTime Tacview 1.7.5
-Constantes utilisées pour spécifier les marqueurs de temps spéciaux.
-BeginningOfTime est typiquement utilisé pour créer des objets intemporels comme les waypoints ou les bâtiments.
-Telemetry.InvalidPropertyIndex Tacview 1.7.5
-Constante utilisée pour détecter des propriétés invalides.
-Telemetry.Tags Tacview 1.7.3
-Énumération des bits utilisés pour définir les types d&amp;rsquo;objets.</description>
+Constantes utilisées pour spécifier deux marqueurs de temps spéciaux.
+BeginningOfTime = -3.4028234663853e+38 EndOfTime = 3.4028234663853e+38  BeginningOfTime est typiquement utilisé pour créer des objets intemporels comme les waypoints ou les bâtiments. EndOfTime est utile par exemple pour identifier les objets encore vivants en fin d&amp;rsquo;enregistrement de télémétrie.</description>
     </item>
     
     <item>

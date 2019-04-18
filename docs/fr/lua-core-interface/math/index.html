@@ -12,20 +12,20 @@
     <title>Math :: Tacview Lua SDK Doc</title>
 
     
-    <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/fontawesome-all.min.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/hybrid.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/featherlight.min.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/perfect-scrollbar.min.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/auto-complete.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/atom-one-dark-reasonable.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/theme.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/hugo-theme.css?1555270420" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/fontawesome-all.min.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/hybrid.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/featherlight.min.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/perfect-scrollbar.min.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/auto-complete.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/atom-one-dark-reasonable.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/theme.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/hugo-theme.css?1555616577" rel="stylesheet">
     
-      <link href="/Tacview-LUA-SDK-Doc/css/theme-blue.css?1555270420" rel="stylesheet">
+      <link href="/Tacview-LUA-SDK-Doc/css/theme-blue.css?1555616577" rel="stylesheet">
     
 
-    <script src="/Tacview-LUA-SDK-Doc/js/jquery-3.3.1.min.js?1555270420"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/jquery-3.3.1.min.js?1555616577"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/lunr.min.js?1555270420"></script>
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/auto-complete.js?1555270420"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/lunr.min.js?1555616577"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/auto-complete.js?1555616577"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/couby.github.io\/Tacview-LUA-SDK-Doc\/\/fr";
     
 </script>
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/search.js?1555270420"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/search.js?1555616577"></script>
 
     
   </div>
@@ -588,12 +588,18 @@
 <li>
 <ul>
 <li><a href="#math-angle-subtract-leftangle-rightangle">Math.Angle.Subtract( leftAngle , rightAngle )</a></li>
+<li><a href="#math-units-feettometers-value">Math.Units.FeetToMeters( value )</a></li>
+<li><a href="#math-units-nauticalmilestometers-value">Math.Units.NauticalMilesToMeters( value )</a></li>
 <li><a href="#math-vector-longitudelatitudetocartesian-longitude-number-latitude-number-altitude-number">Math.Vector.LongitudeLatitudeToCartesian( {longitude = number , latitude = number , altitude = number} )</a></li>
 <li><a href="#math-vector-cartesiantolongitudelatitude-x-number-y-number-z-number">Math.Vector.CartesianToLongitudeLatitude( {x = number , y = number , z = number} )</a></li>
+<li><a href="#math-vector-bearingrangealtitudetolongitudelatitude-referencelongitude-referencelatitude-bearing-range-altitude">Math.Vector.BearingRangeAltitudeToLongitudeLatitude( referenceLongitude , referenceLatitude , bearing , range , altitude )</a></li>
 <li><a href="#math-vector-add-vector1-vector2">Math.Vector.Add( vector1 , vector2 )</a></li>
 <li><a href="#math-vector-subtract-vector1-vector2">Math.Vector.Subtract( vector1 , vector2 )</a></li>
 <li><a href="#math-vector-multiply-factor-vector">Math.Vector.Multiply( factor , vector )</a></li>
 <li><a href="#math-vector-normalize-vector">Math.Vector.Normalize( vector )</a></li>
+<li><a href="#math-vector-getlength-vector-tacview-1-8-0">Math.Vector.GetLength( vector ) &ndash; Tacview 1.8.0</a></li>
+<li><a href="#math-vector-getdistance-pt1-pt2-tacview-1-8-0">Math.Vector.GetDistance( pt1 , pt2 ) &ndash; Tacview 1.8.0</a></li>
+<li><a href="#math-vector-getdistanceonearth-longitude1-latitude1-longitude2-latitude2-altitude-tacview-1-8-0">Math.Vector.GetDistanceOnEarth( longitude1 , latitude1 , longitude2 , latitude2 , altitude ) &ndash; Tacview 1.8.0</a></li>
 <li><a href="#math-vector-anglebetween-vector1-vector2">Math.Vector.AngleBetween( vector1 , vector2 )</a></li>
 <li><a href="#math-vector-anglebetween-vector-referencevector1-referencevector2">Math.Vector.AngleBetween( vector , referenceVector1 , referenceVector2 )</a></li>
 <li><a href="#math-vector-localtoglobal-objecttransform-localcoordinates">Math.Vector.LocalToGlobal( objectTransform , localCoordinates )</a></li>
@@ -650,6 +656,18 @@
 </div>
 
 
+<h4 id="math-units-feettometers-value">Math.Units.FeetToMeters( value )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Convertis les distances en pieds en mètres.</p>
+
+<h4 id="math-units-nauticalmilestometers-value">Math.Units.NauticalMilesToMeters( value )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Convertis les miles nautiques en mètres.</p>
+
 <h4 id="math-vector-longitudelatitudetocartesian-longitude-number-latitude-number-altitude-number">Math.Vector.LongitudeLatitudeToCartesian( {longitude = number , latitude = number , altitude = number} )</h4>
 
 <p><em>Tacview 1.7.2</em></p>
@@ -675,6 +693,24 @@ Il est possible de directement donner une transformée d&rsquo;objet à cette fo
     Une <strong>table</strong> contenant { longitude = &hellip; , latitude = &hellip; , altitude = &hellip;}<br>
     Longitude et latitude sont en radian.<br>
     Altitude est en mètres.</p>
+</div>
+
+
+<h4 id="math-vector-bearingrangealtitudetolongitudelatitude-referencelongitude-referencelatitude-bearing-range-altitude">Math.Vector.BearingRangeAltitudeToLongitudeLatitude( referenceLongitude , referenceLatitude , bearing , range , altitude )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Retrouve les longitude, latitude et altitude relatives à un point de référence donné.</p>
+
+<ul>
+<li>Longitude et latitude sont exprimés en radian.</li>
+<li>Le Bearing est donné en degré par rapport au Nord vrai.</li>
+<li>La distance est donnée en mètres.</li>
+<li>L&rsquo;altitude est exprimée en mètres.</li>
+</ul>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+        Position du point cible sous le format {longitude = nombre , latitude = nombre , altitude = nombre}</p>
 </div>
 
 
@@ -722,6 +758,18 @@ Il est possible de directement donner une transformée d&rsquo;objet à cette fo
     Cette fonction est sûre, aussi un vecteur nul indique que le vecteur est nul.</p>
 </div>
 
+
+<h4 id="math-vector-getlength-vector-tacview-1-8-0">Math.Vector.GetLength( vector ) &ndash; Tacview 1.8.0</h4>
+
+<p>Retrouve la longeur d&rsquo;un vecteur donné.</p>
+
+<h4 id="math-vector-getdistance-pt1-pt2-tacview-1-8-0">Math.Vector.GetDistance( pt1 , pt2 ) &ndash; Tacview 1.8.0</h4>
+
+<p>Retrouve la distance entre deux points 3D cartésiens donnés.</p>
+
+<h4 id="math-vector-getdistanceonearth-longitude1-latitude1-longitude2-latitude2-altitude-tacview-1-8-0">Math.Vector.GetDistanceOnEarth( longitude1 , latitude1 , longitude2 , latitude2 , altitude ) &ndash; Tacview 1.8.0</h4>
+
+<p>Retrouve la distance entre les coordonnées spécifiées sur terre à l&rsquo;altitude donnée au-dessus du niveau de la mer.</p>
 
 <h4 id="math-vector-anglebetween-vector1-vector2">Math.Vector.AngleBetween( vector1 , vector2 )</h4>
 
@@ -1141,20 +1189,20 @@ Contrairement à <strong>AngleBetween( vector1 , vector2 )</strong>, cette fonct
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/Tacview-LUA-SDK-Doc/js/clipboard.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.jquery.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/jquery.sticky.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/featherlight.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/html5shiv-printshiv.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/highlight.pack.js?1555270420"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/clipboard.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.jquery.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/jquery.sticky.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/featherlight.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/html5shiv-printshiv.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/highlight.pack.js?1555616577"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/Tacview-LUA-SDK-Doc/js/modernizr.custom-3.6.0.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/learn.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/hugo-learn.js?1555270420"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/modernizr.custom-3.6.0.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/learn.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/hugo-learn.js?1555616577"></script>
 
-    <link href="/Tacview-LUA-SDK-Doc/mermaid/mermaid.css?1555270420" type="text/css" rel="stylesheet" />
-    <script src="/Tacview-LUA-SDK-Doc/mermaid/mermaid.js?1555270420"></script>
+    <link href="/Tacview-LUA-SDK-Doc/mermaid/mermaid.css?1555616577" type="text/css" rel="stylesheet" />
+    <script src="/Tacview-LUA-SDK-Doc/mermaid/mermaid.js?1555616577"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

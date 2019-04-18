@@ -12,20 +12,20 @@
     <title>Paramètres :: Tacview Lua SDK Doc</title>
 
     
-    <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/fontawesome-all.min.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/hybrid.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/featherlight.min.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/perfect-scrollbar.min.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/auto-complete.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/atom-one-dark-reasonable.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/theme.css?1555270420" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/hugo-theme.css?1555270420" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/fontawesome-all.min.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/hybrid.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/featherlight.min.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/perfect-scrollbar.min.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/auto-complete.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/atom-one-dark-reasonable.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/theme.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/hugo-theme.css?1555616577" rel="stylesheet">
     
-      <link href="/Tacview-LUA-SDK-Doc/css/theme-blue.css?1555270420" rel="stylesheet">
+      <link href="/Tacview-LUA-SDK-Doc/css/theme-blue.css?1555616577" rel="stylesheet">
     
 
-    <script src="/Tacview-LUA-SDK-Doc/js/jquery-3.3.1.min.js?1555270420"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/jquery-3.3.1.min.js?1555616577"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/lunr.min.js?1555270420"></script>
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/auto-complete.js?1555270420"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/lunr.min.js?1555616577"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/auto-complete.js?1555616577"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/couby.github.io\/Tacview-LUA-SDK-Doc\/\/fr";
     
 </script>
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/search.js?1555270420"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/search.js?1555616577"></script>
 
     
   </div>
@@ -636,6 +636,7 @@ Si vous souhaitez sauvegarder ou charger les paramètres de votre addon, regarde
 <li><code>&quot;UI.View.Grid.Visible&quot;</code>            &ndash; Active/désactive la grille latitude/longitude</li>
 <li><code>&quot;UI.View.HUD.Visible&quot;</code>         &ndash; Active/désactive le head-up-display du cockpit</li>
 <li><code>&quot;UI.View.Overlay.Visible&quot;</code>     &ndash; Active/désactive la surcouche d&rsquo;informations affichée sur la vue 3D</li>
+<li><code>&quot;UI.View.Camera.Dogfight.Enabled&quot;</code>   &ndash; Active/désactive le mode caméra dogfight (lorsqu&rsquo;en vue externe)</li>
 </ul>
 
 <h4 id="settings-getboolean-settingfullpath">Settings.GetBoolean( settingFullPath )</h4>
@@ -663,7 +664,26 @@ valeur booléenne du réglage correspondant.</p>
 <li><code>&quot;Empty&quot;</code></li>
 <li><code>&quot;Flat&quot;</code></li>
 <li><code>&quot;3D&quot;</code></li>
-<li><code>&quot;Full3D&quot;</code></li>
+
+<li><p><code>&quot;Full3D&quot;</code></p></li>
+
+<li><p><code>&quot;UI.View.Camera.Mode&quot;</code>             &ndash; Change le mode caméra</p></li>
+
+<li><p><code>&quot;Cockpit&quot;</code></p></li>
+
+<li><p><code>&quot;External&quot;</code></p></li>
+
+<li><p><code>&quot;Satellite&quot;</code></p></li>
+
+<li><p><code>&quot;Free&quot;</code></p></li>
+
+<li><p><code>&quot;UI.View.Camera.Dogfight.Mode&quot;</code>        &ndash; Change le mode caméra dogfight camera (actif lorsque <code>&quot;UI.View.Camera.Mode&quot; == &quot;External&quot;</code> et <code>&quot;UI.View.Camera.Dogfight.Enabled&quot; == true</code>)</p></li>
+
+<li><p><code>&quot;Centered&quot;</code></p></li>
+
+<li><p><code>&quot;LookAt&quot;</code></p></li>
+
+<li><p><code>&quot;LookForward&quot;</code></p></li>
 </ul>
 
 <h4 id="settings-getstring-settingfullpath">Settings.GetString( settingFullPath )</h4>
@@ -1028,20 +1048,20 @@ chaîne de caractères du réglage correspondant.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/Tacview-LUA-SDK-Doc/js/clipboard.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.jquery.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/jquery.sticky.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/featherlight.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/html5shiv-printshiv.min.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/highlight.pack.js?1555270420"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/clipboard.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.jquery.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/jquery.sticky.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/featherlight.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/html5shiv-printshiv.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/highlight.pack.js?1555616577"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/Tacview-LUA-SDK-Doc/js/modernizr.custom-3.6.0.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/learn.js?1555270420"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/hugo-learn.js?1555270420"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/modernizr.custom-3.6.0.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/learn.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/hugo-learn.js?1555616577"></script>
 
-    <link href="/Tacview-LUA-SDK-Doc/mermaid/mermaid.css?1555270420" type="text/css" rel="stylesheet" />
-    <script src="/Tacview-LUA-SDK-Doc/mermaid/mermaid.js?1555270420"></script>
+    <link href="/Tacview-LUA-SDK-Doc/mermaid/mermaid.css?1555616577" type="text/css" rel="stylesheet" />
+    <script src="/Tacview-LUA-SDK-Doc/mermaid/mermaid.js?1555616577"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -33,7 +33,7 @@ NOTE: this function does not ask the user to save his work.
 Settings.SetBoolean( settingPath, newBooleanValue ) Tacview 1.7.2
 Save a Boolean setting under the given name.
 settingPath can be one of the following:
- &amp;quot;UI.View.Grid.Visible&amp;quot; &amp;ndash; Enable/disable latitude/longitude grid &amp;quot;UI.View.HUD.Visible&amp;quot; &amp;ndash; Enable/disable cockpit head-up-display &amp;quot;UI.View.Overlay.Visible&amp;quot; &amp;ndash; Enable/disable all the informations displayed on top of the 3D view  Settings.GetBoolean( settingFullPath ) Tacview 1.</description>
+ &amp;quot;UI.View.Grid.Visible&amp;quot; &amp;ndash; Enable/disable latitude/longitude grid &amp;quot;UI.View.HUD.Visible&amp;quot; &amp;ndash; Enable/disable cockpit head-up-display &amp;quot;UI.View.Overlay.Visible&amp;quot; &amp;ndash; Enable/disable all the informations displayed on top of the 3D view &amp;quot;UI.View.Camera.Dogfight.Enabled&amp;quot; &amp;ndash; Enable/disable dogfight camera mode (when in external view)  Settings.</description>
     </item>
     
     <item>
@@ -90,7 +90,8 @@ Substracts two radian angles.
 Return value:
 Difference between leftAngle and rightAngle.
 The result is normalized to [-pi, +pi].
-Math.Vector.LongitudeLatitudeToCartesian( {longitude = number , latitude = number , altitude = number} ) Tacview 1.</description>
+Math.Units.FeetToMeters( value ) Tacview 1.8.0
+Converts feet distances in meters</description>
     </item>
     
     <item>
@@ -117,13 +118,8 @@ NOTE: DO NOT force the time at every frame, especially during real-time telemetr
 Use the telemetry manager to read and write any data for any dynamic object.
 Telemetry.BeginningOfTime Tacview 1.7.5
 Telemetry.EndOfTime Tacview 1.7.5
-Constants used to specify special time stamps.
-BeginningOfTime is typically used to create timeless objects like waypoints or buildings.
-Telemetry.InvalidPropertyIndex Tacview 1.7.5
-Constant used to detect invalid properties.
-Telemetry.Tags Tacview 1.7.3
-Enumeration of bits used to defined object types.
- -- Basic Type Telemetry.</description>
+Constants used to specify two special time stamps.
+BeginningOfTime = -3.4028234663853e+38 EndOfTime = 3.4028234663853e+38  BeginningOfTime is typically used to create timeless objects like waypoints or buildings. EndOfTime is usefull for exemple to identify objects still alive at the end of telemetry recording.</description>
     </item>
     
     <item>

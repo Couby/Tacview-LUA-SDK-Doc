@@ -26,6 +26,18 @@ Substracts two radian angles.
 {{% /notice %}}
 
 
+#### Math.Units.FeetToMeters( value )
+*Tacview 1.8.0*
+
+Converts feet distances in meters
+
+
+#### Math.Units.NauticalMilesToMeters( value )
+*Tacview 1.8.0*
+
+Converts nautical miles distances in meters
+
+
 #### Math.Vector.LongitudeLatitudeToCartesian( {longitude = number , latitude = number , altitude = number} )
 *Tacview 1.7.2*
 
@@ -51,6 +63,22 @@ Converts cartesian coordinates into Earth spherical coordinates.
 	A **table** which contains the { longitude = ... , latitude = ... , altitude = ...}<br>
 	Longitude and latitude are in radian.<br>
 	Altitude is in meter.
+{{% /notice %}}
+
+
+#### Math.Vector.BearingRangeAltitudeToLongitudeLatitude( referenceLongitude , referenceLatitude , bearing , range , altitude )
+*Tacview 1.8.0*
+
+Retrieve longitude, latitude and altitude relative to given reference point.
+
+- Longitude and latitude are expressed in radian.
+- Bearing is expressed in degrees relative to true north.
+- Range is expressed in meters.
+- Altitude is expressed in meters.
+
+{{% notice note %}}
+**Return value:**<br>
+		Position of the target point as {longitude = number , latitude = number , altitude = number}
 {{% /notice %}}
 
 
@@ -97,6 +125,21 @@ Normalize the given vector.
 	Normalized **vector**.<br>
 	This function is safe and a nul vector is the vector is nul.
 {{% /notice %}}
+
+
+#### Math.Vector.GetLength( vector ) -- Tacview 1.8.0
+
+Retrieve the length of given vector.
+
+
+#### Math.Vector.GetDistance( pt1 , pt2 ) -- Tacview 1.8.0
+
+Retrieve the distance between given 3D cartesian points.
+
+
+#### Math.Vector.GetDistanceOnEarth( longitude1 , latitude1 , longitude2 , latitude2 , altitude ) -- Tacview 1.8.0
+
+Retrieve the distance between the specified coordinates on earth at the given above sea level altitude.
 
 
 #### Math.Vector.AngleBetween( vector1 , vector2 )

@@ -48,9 +48,10 @@ Settings.SetBoolean( settingPath, newBooleanValue ) -- Tacview 1.7.2
 
 	settingPath can be one of the following:
 
-		"UI.View.Grid.Visible"			-- Enable/disable latitude/longitude grid
-		"UI.View.HUD.Visible"			-- Enable/disable cockpit head-up-display
-		"UI.View.Overlay.Visible"		-- Enable/disable all the informations displayed on top of the 3D view
+		"UI.View.Grid.Visible"				-- Enable/disable latitude/longitude grid
+		"UI.View.HUD.Visible"				-- Enable/disable cockpit head-up-display
+		"UI.View.Overlay.Visible"			-- Enable/disable all the informations displayed on top of the 3D view
+		"UI.View.Camera.Dogfight.Enabled"	-- Enable/disable dogfight camera mode (when in external view)
 
 Settings.GetBoolean( settingFullPath ) -- Tacview 1.7.2
 
@@ -67,11 +68,22 @@ Settings.SetString( settingFullPath , newStringValue ) -- Tacview 1.7.2
 
 	settingFullPath and newStringValue can be one of the following:
 
-		"UI.View.Terrain.Mode" -- Change the way the terrain is displayed in the 3D view
+		"UI.View.Terrain.Mode"				-- Change the way the terrain is displayed in the 3D view
 			"Empty"
 			"Flat"
 			"3D"
 			"Full3D"
+
+		"UI.View.Camera.Mode"				-- Change camera mode
+			"Cockpit"
+			"External"
+			"Satellite"
+			"Free"
+
+		"UI.View.Camera.Dogfight.Mode"		-- Change dogfight camera mode (active only when "UI.View.Camera.Mode" == "External" and "UI.View.Camera.Dogfight.Enabled" == true)
+			"Centered"
+			"LookAt"
+			"LookForward"
 
 Settings.GetString( settingFullPath ) -- Tacview 1.7.2
 
@@ -141,7 +153,7 @@ Log.Debug(...) -- Tacview 1.7.2
 
 	Use this method to help you trace and diagnose problems with your addon.
 	NOTE: Debug information will be displayed only when using the /Debug:On command line argument.
-	
+
 Log.Info(...) -- Tacview 1.7.2
 
 	This method can be used to display specific information related to your addon which might be useful to the end-user.
@@ -201,6 +213,14 @@ Math.Angle.Subtract( leftAngle , rightAngle ) -- Tacview 1.7.2
 		Difference between leftAngle and rightAngle.
 		The result is normalized to (-pi, +pi].
 
+Math.Units.FeetToMeters( value ) -- Tacview 1.8.0
+
+	Converts feet distances in meters
+
+Math.Units.NauticalMilesToMeters( value ) -- Tacview 1.8.0
+
+	Converts nautical miles distances in meters
+
 Math.Vector.LongitudeLatitudeToCartesian( {longitude = number , latitude = number , altitude = number} ) -- Tacview 1.7.2
 
 	Converts Earth spherical coordinates into cartesian coordinates.
@@ -222,6 +242,20 @@ Math.Vector.CartesianToLongitudeLatitude( {x = number , y = number , z = number}
 		A table which contains the { longitude = ... , latitude = ... , altitude = ...}
 		Longitude and latitude are in radian.
 		Altitude is in meter.
+
+Math.Vector.BearingRangeAltitudeToLongitudeLatitude( referenceLongitude , referenceLatitude , bearing , range , altitude ) -- Tacview 1.8.0
+
+	Retrieve longitude, latitude and altitude relative to given reference point.
+
+		- Longitude and latitude are expressed in radian.
+
+		- Bearing is expressed in degrees relative to true north.
+		- Range is expressed in meters.
+		- Altitude is expressed in meters.
+
+	Return value:
+
+		Position of the target point as {longitude = number , latitude = number , altitude = number}
 
 Math.Vector.Add( vector1 , vector2 ) -- Tacview 1.7.2
 
@@ -255,6 +289,18 @@ Math.Vector.Normalize( vector ) -- Tacview 1.7.2
 
 		Normalized vector.
 		This function is safe and a nul vector is the vector is nul.
+
+Math.Vector.GetLength( vector ) -- Tacview 1.8.0
+
+	Retrieve the length of given vector.
+
+Math.Vector.GetDistance( pt1 , pt2 ) -- Tacview 1.8.0
+
+	Retrieve the distance between given 3D cartesian points.
+
+Math.Vector.GetDistanceOnEarth( longitude1 , latitude1 , longitude2 , latitude2 , altitude ) -- Tacview 1.8.0
+
+	Retrieve the distance between the specified coordinates on earth at the given above sea level altitude.
 
 Math.Vector.AngleBetween( vector1 , vector2 ) -- Tacview 1.7.2
 
@@ -353,6 +399,25 @@ Telemetry.Tags -- Tacview 1.7.3
 
 	Enumeration of bits used to defined object types.
 
+		-- Domain
+
+		Telemetry.Tags.Air
+		Telemetry.Tags.Ground
+		Telemetry.Tags.Sea
+
+		Telemetry.Tags.Weapon
+		Telemetry.Tags.Sensor
+		Telemetry.Tags.Navaid
+		Telemetry.Tags.Misc
+
+		-- Attributes
+
+		Telemetry.Tags.Static
+		Telemetry.Tags.Heavy
+		Telemetry.Tags.Medium
+		Telemetry.Tags.Light
+		Telemetry.Tags.Minor
+
 		-- Basic Type
 
 		Telemetry.Tags.FixedWing
@@ -379,6 +444,38 @@ Telemetry.Tags -- Tacview 1.7.3
 
 		Telemetry.Tags.Bullseye
 		Telemetry.Tags.Waypoint
+
+		-- Specific Type
+
+		Telemetry.Tags.Tank
+		Telemetry.Tags.Warship
+		Telemetry.Tags.AircraftCarrier
+		Telemetry.Tags.Submarine
+		Telemetry.Tags.Infantry
+		Telemetry.Tags.Parachutist
+
+		Telemetry.Tags.Shell
+		Telemetry.Tags.Bullet
+
+		Telemetry.Tags.Flare
+		Telemetry.Tags.Chaff
+		Telemetry.Tags.SmokeGrenade
+
+		Telemetry.Tags.Aerodrome
+
+		Telemetry.Tags.Container
+		Telemetry.Tags.Shrapnel
+		Telemetry.Tags.Explosion
+
+Telemetry.AllGivenTagsActive( objectTags , activeTagsCombination ) -- Tacview 1.8.0
+Telemetry.AnyGivenTagActive( objectTags , activeTagsCombination ) -- Tacview 1.8.0
+
+	Helpers to know if all or any of the combination of tags match given object tags.
+	You can retrieve current object tags (which defines the type of an object) with the Telemetry.GetCurrentTags function.
+
+	Return value:
+
+		true or false depending on the match
 
 Telemetry.Property -- Tacview 1.7.6
 
@@ -570,6 +667,24 @@ Telemetry.SetTextSample( objectHandle , absoluteTime , propertyIndex , value ) -
 	Set or re-set given numeric or text property value at the given time.
 	You can set absoluteTime to Tacview.Telemetry.BeginningOfTime to declare the properties of timeless objects like waypoints.
 
+Telemetry.GetNumericSampleCount( objectHandle , propertyIndex ) -- Tacview 1.8.0
+Telemetry.GetTextSampleCount( objectHandle , propertyIndex ) -- Tacview 1.8.0
+
+	Retrieve the number of samples currently loaded in memory for the specified object.
+	This function is typically used to enumerate the object samples.
+
+Telemetry.GetNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex ) -- Tacview 1.8.0
+Telemetry.GetTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex ) -- Tacview 1.8.0
+
+	Retrieve a specific object telemetry data from its index.
+	SampleIndex starts at 0 and ends at count-1.
+
+	Return value:
+
+		sampleValue , sampleTime , validity
+
+		Returns nil if invalid
+
 Telemetry.SetTransform( objectHandle , absoluteTime , transform ) -- Tacview 1.7.5
 
 	Set or re-set object position and rotation at the given time.
@@ -620,6 +735,18 @@ Telemetry.SetLifeTimeEnd( objectHandle , absoluteTime ) -- Tacview 1.7.5
 
 	Defines the end-of-life of the specified object.
 	Typically used to specify when an object has been destroyed or has been removed from the battlefield.
+
+Telemetry.RemoveNumericSample( objectHandle , absoluteTime , propertyIndex ) -- Tacview 1.8.0
+Telemetry.RemoveNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex ) -- Tacview 1.8.0
+Telemetry.RemoveTextSample( objectHandle , absoluteTime , propertyIndex ) -- Tacview 1.8.0
+Telemetry.RemoveTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex ) -- Tacview 1.8.0
+
+	Delete sample value at the specified time or index.
+
+	Return value:
+
+		true if the operation has succeeded
+		false if one of the parameter is out-dated (because of real-time telemetry change for example)
 
 Telemetry.DeleteObject( objectHandle ) -- Tacview 1.7.5
 

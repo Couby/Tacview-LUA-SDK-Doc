@@ -35,6 +35,25 @@ Constante utilisée pour détecter des propriétés invalides.
 
 Énumération des bits utilisés pour définir les types d'objets.
 
+		-- Domain
+
+		Telemetry.Tags.Air
+		Telemetry.Tags.Ground
+		Telemetry.Tags.Sea
+
+		Telemetry.Tags.Weapon
+		Telemetry.Tags.Sensor
+		Telemetry.Tags.Navaid
+		Telemetry.Tags.Misc
+
+		-- Attributes
+
+		Telemetry.Tags.Static
+		Telemetry.Tags.Heavy
+		Telemetry.Tags.Medium
+		Telemetry.Tags.Light
+		Telemetry.Tags.Minor
+
 		-- Types basiques
 
 		Telemetry.Tags.FixedWing
@@ -62,6 +81,28 @@ Constante utilisée pour détecter des propriétés invalides.
 		Telemetry.Tags.Bullseye
 		Telemetry.Tags.Waypoint
 
+		-- Specific Type
+
+		Telemetry.Tags.Tank
+		Telemetry.Tags.Warship
+		Telemetry.Tags.AircraftCarrier
+		Telemetry.Tags.Submarine
+		Telemetry.Tags.Infantry
+		Telemetry.Tags.Parachutist
+
+		Telemetry.Tags.Shell
+		Telemetry.Tags.Bullet
+
+		Telemetry.Tags.Flare
+		Telemetry.Tags.Chaff
+		Telemetry.Tags.SmokeGrenade
+
+		Telemetry.Tags.Aerodrome
+
+		Telemetry.Tags.Container
+		Telemetry.Tags.Shrapnel
+		Telemetry.Tags.Explosion
+
 Cas d'usage pour identifier si un objet est de type avion :
 
 	local objectTags = Tacview.Telemetry.GetCurrentTags( objectHandle )
@@ -69,6 +110,20 @@ Cas d'usage pour identifier si un objet est de type avion :
 	if (Tacview.Telemetry.AllGivenTagsActive(objectTags, Tacview.Telemetry.Tags.FixedWing)) then
 	    this_is_a_plane;
 	end
+
+
+#### Telemetry.AllGivenTagsActive( objectTags , activeTagsCombination )
+*Tacview 1.8.0*
+#### Telemetry.AnyGivenTagActive( objectTags , activeTagsCombination )
+*Tacview 1.8.0*
+
+Aides pour savoir si tout ou partie de combinaisons de tags correspond aux tags d'un objet donné.
+Vous retrouvez les tags actuels d'un objets (qui définissent le type de l'objet) avec la fonction [Telemetry.GetCurrentTags](/Tacview-LUA-SDK-Doc/fr/lua-core-interface/telemetry/#telemetry-getcurrenttags-objecthandle).
+
+{{% notice note %}}
+**Return value:**<br>
+		true or false depending on the match
+{{% /notice %}}
 
 
 #### Telemetry.Property
@@ -330,7 +385,31 @@ Récupère la valeur numérique ou textuelle de la propriété à un moment donn
 
 Définir ou redéfinir une valeur numérique ou une propriété de texte donnée à un moment donné.
 
-Vous pouvez définir ** absoluteTime ** sur ** Tacview.Telemetry.BeginningOfTime ** pour déclarer les propriétés des objets intemporels tels que les waypoints.
+Vous pouvez définir **absoluteTime** sur **Tacview.Telemetry.BeginningOfTime** pour déclarer les propriétés des objets intemporels tels que les waypoints.
+
+
+#### Telemetry.GetNumericSampleCount( objectHandle , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.GetTextSampleCount( objectHandle , propertyIndex )
+*Tacview 1.8.0*
+
+Récupère le nombre d'échantillons actuellement chargés en mémoire pour l'objet spécifié.
+Cette fonction est généralement utilisée pour énumérer les échantillons d'objets.
+
+
+#### Telemetry.GetNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.GetTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex )
+*Tacview 1.8.0*
+
+Récupérer une donnée de télémétrie d'objet spécifique à partir de son index.
+SampleIndex commence à 0 et se termine au compte-1.
+
+{{% notice note %}}
+**Return value:**<br>
+		sampleValue , sampleTime , validity<br>
+		Retourne nil si invalide
+{{% /notice %}}
 
 
 #### Telemetry.SetTransform( objectHandle , absoluteTime , transform )
@@ -393,6 +472,24 @@ Si l'objet n'a jamais été détruit ni supprimé du champ de bataille, **lifeTi
 Définit la fin de vie de l'objet spécifié.
 
 Généralement utilisé pour spécifier quand un objet a été détruit ou a été retiré du champ de bataille.
+
+
+#### Telemetry.RemoveNumericSample( objectHandle , absoluteTime , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.RemoveNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.RemoveTextSample( objectHandle , absoluteTime , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.RemoveTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex )
+*Tacview 1.8.0*
+
+Supprimer la valeur de l'échantillon à l'heure ou à l'index spécifié.
+
+{{% notice note %}}
+**Return value:**<br>
+		true si l'opération de suppression s'est bien passée<br>
+		false si l'un des paramètres est obsolète (en raison d'un changement de télémétrie en temps réel, par exemple)
+{{% /notice %}}
 
 
 #### Telemetry.DeleteObject( objectHandle )

@@ -35,6 +35,25 @@ Constant used to detect invalid properties.
 
 Enumeration of bits used to defined object types.
 
+		-- Domain
+
+		Telemetry.Tags.Air
+		Telemetry.Tags.Ground
+		Telemetry.Tags.Sea
+
+		Telemetry.Tags.Weapon
+		Telemetry.Tags.Sensor
+		Telemetry.Tags.Navaid
+		Telemetry.Tags.Misc
+
+		-- Attributes
+
+		Telemetry.Tags.Static
+		Telemetry.Tags.Heavy
+		Telemetry.Tags.Medium
+		Telemetry.Tags.Light
+		Telemetry.Tags.Minor
+
 		-- Basic Type
 
 		Telemetry.Tags.FixedWing
@@ -62,6 +81,28 @@ Enumeration of bits used to defined object types.
 		Telemetry.Tags.Bullseye
 		Telemetry.Tags.Waypoint
 
+		-- Specific Type
+
+		Telemetry.Tags.Tank
+		Telemetry.Tags.Warship
+		Telemetry.Tags.AircraftCarrier
+		Telemetry.Tags.Submarine
+		Telemetry.Tags.Infantry
+		Telemetry.Tags.Parachutist
+
+		Telemetry.Tags.Shell
+		Telemetry.Tags.Bullet
+
+		Telemetry.Tags.Flare
+		Telemetry.Tags.Chaff
+		Telemetry.Tags.SmokeGrenade
+
+		Telemetry.Tags.Aerodrome
+
+		Telemetry.Tags.Container
+		Telemetry.Tags.Shrapnel
+		Telemetry.Tags.Explosion
+
 Use case exemple to identify an object type as airplane :
 
 	local objectTags = Tacview.Telemetry.GetCurrentTags( objectHandle )
@@ -69,6 +110,20 @@ Use case exemple to identify an object type as airplane :
 	if (Tacview.Telemetry.AllGivenTagsActive(objectTags, Tacview.Telemetry.Tags.FixedWing)) then
 	    this_is_a_plane;
 	end
+
+
+#### Telemetry.AllGivenTagsActive( objectTags , activeTagsCombination )
+*Tacview 1.8.0*
+#### Telemetry.AnyGivenTagActive( objectTags , activeTagsCombination )
+*Tacview 1.8.0*
+
+Helpers to know if all or any of the combination of tags match given object tags.
+You can retrieve current object tags (which defines the type of an object) with the [Telemetry.GetCurrentTags](/Tacview-LUA-SDK-Doc/lua-core-interface/telemetry/#telemetry-getcurrenttags-objecthandle) function.
+
+{{% notice note %}}
+**Return value:**<br>
+		true or false depending on the match
+{{% /notice %}}
 
 
 #### Telemetry.Property
@@ -332,6 +387,30 @@ Set or re-set given numeric or text property value at the given time.
 You can set **absoluteTime** to **Tacview.Telemetry.BeginningOfTime** to declare the properties of timeless objects like waypoints.
 
 
+#### Telemetry.GetNumericSampleCount( objectHandle , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.GetTextSampleCount( objectHandle , propertyIndex )
+*Tacview 1.8.0*
+
+Retrieve the number of samples currently loaded in memory for the specified object.
+This function is typically used to enumerate the object samples.
+
+
+#### Telemetry.GetNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.GetTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex )
+*Tacview 1.8.0*
+
+Retrieve a specific object telemetry data from its index.
+SampleIndex starts at 0 and ends at count-1.
+
+{{% notice note %}}
+**Return value:**<br>
+		sampleValue , sampleTime , validity<br>
+		Returns nil if invalid
+{{% /notice %}}
+
+
 #### Telemetry.SetTransform( objectHandle , absoluteTime , transform )
 *Tacview 1.7.5*
 
@@ -392,6 +471,24 @@ If the object has never been destroyed or removed from the battlefield, then **l
 Defines the end-of-life of the specified object.
 
 Typically used to specify when an object has been destroyed or has been removed from the battlefield.
+
+
+#### Telemetry.RemoveNumericSample( objectHandle , absoluteTime , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.RemoveNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.RemoveTextSample( objectHandle , absoluteTime , propertyIndex )
+*Tacview 1.8.0*
+#### Telemetry.RemoveTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex )
+*Tacview 1.8.0*
+
+Delete sample value at the specified time or index.
+
+{{% notice note %}}
+**Return value:**<br>
+		true if the operation has succeeded<br>
+		false if one of the parameter is out-dated (because of real-time telemetry change for example)
+{{% /notice %}}
 
 
 #### Telemetry.DeleteObject( objectHandle )

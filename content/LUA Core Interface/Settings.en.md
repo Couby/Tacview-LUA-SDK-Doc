@@ -18,6 +18,7 @@ Save a Boolean setting under the given name.
 *	`"UI.View.Grid.Visible"`			-- Enable/disable latitude/longitude grid
 *	`"UI.View.HUD.Visible"`			-- Enable/disable cockpit head-up-display
 *	`"UI.View.Overlay.Visible"`		-- Enable/disable all the informations displayed on top of the 3D view
+* `"UI.View.Camera.Dogfight.Enabled"`	-- Enable/disable dogfight camera mode (when in external view)
 
 
 #### Settings.GetBoolean( settingFullPath )
@@ -44,6 +45,17 @@ Save a string setting under the given name.
 *	`"Flat"`
 *	`"3D"`
 *	`"Full3D"`
+
+*	`"UI.View.Camera.Mode"`				-- Change camera mode
+*	`"Cockpit"`
+*	`"External"`
+*	`"Satellite"`
+*	`"Free"`
+
+*	`"UI.View.Camera.Dogfight.Mode"`		-- Change dogfight camera mode (active only when `"UI.View.Camera.Mode" == "External"` and `"UI.View.Camera.Dogfight.Enabled" == true`)
+*	`"Centered"`
+*	`"LookAt"`
+*	`"LookForward"`
 
 
 #### Settings.GetString( settingFullPath )

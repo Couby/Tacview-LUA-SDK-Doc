@@ -18,6 +18,7 @@ Sauvegarde un réglage Booléen sous le nom donnée.
 *	`"UI.View.Grid.Visible"`			-- Active/désactive la grille latitude/longitude
 *	`"UI.View.HUD.Visible"`			-- Active/désactive le head-up-display du cockpit
 *	`"UI.View.Overlay.Visible"`		-- Active/désactive la surcouche d'informations affichée sur la vue 3D
+* `"UI.View.Camera.Dogfight.Enabled"`	-- Active/désactive le mode caméra dogfight (lorsqu'en vue externe)
 
 
 #### Settings.GetBoolean( settingFullPath )
@@ -44,6 +45,17 @@ Sauvegarde un réglage en chaîne de caractère sous le nom donné.
 *	`"Flat"`
 *	`"3D"`
 *	`"Full3D"`
+
+*	`"UI.View.Camera.Mode"`				-- Change le mode caméra
+*	`"Cockpit"`
+*	`"External"`
+*	`"Satellite"`
+*	`"Free"`
+
+*	`"UI.View.Camera.Dogfight.Mode"`		-- Change le mode caméra dogfight camera (actif lorsque `"UI.View.Camera.Mode" == "External"` et `"UI.View.Camera.Dogfight.Enabled" == true`)
+*	`"Centered"`
+*	`"LookAt"`
+*	`"LookForward"`
 
 
 #### Settings.GetString( settingFullPath )

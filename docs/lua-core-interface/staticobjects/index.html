@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/Tacview-LUA-SDK-Doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: Tacview Lua SDK Doc</title>
+    <title>StaticObjects :: Tacview Lua SDK Doc</title>
 
     
     <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1564854127" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Tacview-LUA-SDK-Doc/categories/">
+  <body class="" data-url="/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/Tacview-LUA-SDK-Doc/lua-core-interface/" title="LUA Core Interface" class="dd-item 
-        
+        parent
         
         
         ">
@@ -157,7 +157,7 @@
  
   
     
-      <li data-nav-id="/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/" title="StaticObjects" class="dd-item ">
+      <li data-nav-id="/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/" title="StaticObjects" class="dd-item active">
         <a href="/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/">
         StaticObjects
         
@@ -514,7 +514,7 @@
                   
                     
                     
-                      <option id="en" value="https://couby.github.io/Tacview-LUA-SDK-Doc/categories/" selected>English</option>
+                      <option id="en" value="https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/" selected>English</option>
                     
                   
               
@@ -528,7 +528,7 @@
                   
                     
                     
-                      <option id="fr" value="https://couby.github.io/Tacview-LUA-SDK-Doc/fr/categories/">Français</option>
+                      <option id="fr" value="https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-core-interface/staticobjects/">Français</option>
                     
                   
               
@@ -569,6 +569,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/Couby/Tacview-LUA-SDK-Doc/edit/master/content/LUA%20Core%20Interface/StaticObjects.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -585,7 +596,19 @@
                     
           
           
-            Categories
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/Tacview-LUA-SDK-Doc/'></a> > <a href='/Tacview-LUA-SDK-Doc/lua-core-interface/'>LUA Core Interface</a> > StaticObjects
+          
+         
+          
+         
           
         
                  
@@ -594,7 +617,21 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#staticobjects-gethandlebyname-objectname">StaticObjects.GetHandleByName( objectName )</a></li>
+<li><a href="#staticobjects-setvisible-staticobjecthandle-isvisible">StaticObjects.SetVisible( staticObjectHandle , isVisible )</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -610,7 +647,7 @@
           
             <h1>
               
-              Categories
+              StaticObjects
             </h1>
           
 
@@ -620,15 +657,35 @@
 
 
 
+<h4 id="staticobjects-gethandlebyname-objectname">StaticObjects.GetHandleByName( objectName )</h4>
 
-<ul>
-	
-</ul>
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Retrieve static object handle from its name.
+The name of the object can be defined via the <name> xml tag in kml files.</p>
+
+<p>Names are case sensitive and may not be unique.
+This function will return the first matching object.
+Beware that object handles are volatile and may not be preserved the next time your addon is being called by Tacview.</p>
+
+<p><div class="notices note" ><p><strong>Return value:</strong><br>
+handle of the static object
+or nil of no object correspond to the given name</p>
+</div>
+   Return value:</p>
+
+<h4 id="staticobjects-setvisible-staticobjecthandle-isvisible">StaticObjects.SetVisible( staticObjectHandle , isVisible )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Show or hide given object.
+You can use StaticObjects.GetHandleByName() to retrieve the handle of the object you would like to show/hide.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -661,8 +718,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -676,6 +731,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -725,6 +783,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -740,6 +799,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -988,8 +1050,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/Tacview-LUA-SDK-Doc/lua-core-interface/addons/" title="Add Ons"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/Tacview-LUA-SDK-Doc/lua-core-interface/" title="LUA Core Interface" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/Tacview-LUA-SDK-Doc/lua-core-interface/log/" title="Log" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1020,3 +1084,4 @@
 
   </body>
 </html>
+

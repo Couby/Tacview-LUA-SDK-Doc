@@ -78,6 +78,21 @@
   </url>
   
   <url>
+    <loc>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/</loc>
+    <lastmod>2019-04-13T18:16:52+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-core-interface/staticobjects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/"
+                />
+  </url>
+  
+  <url>
     <loc>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/log/</loc>
     <lastmod>2019-04-13T18:16:51+02:00</lastmod>
     <xhtml:link
@@ -194,6 +209,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.menus/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.messagebox/</loc>
+    <lastmod>2019-04-13T18:16:44+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-main-interface/ui.messagebox/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.messagebox/"
                 />
   </url>
   

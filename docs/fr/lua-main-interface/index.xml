@@ -41,6 +41,16 @@ Vous pouvez spécifier l&amp;rsquo;identifiant d&amp;rsquo;un menu parent ou vou
     </item>
     
     <item>
+      <title>UI.MessageBox</title>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-main-interface/ui.messagebox/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:44 +0200</pubDate>
+      
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-main-interface/ui.messagebox/</guid>
+      <description>Les boîtes de message peuvent être utilisées pour afficher des notifications et poser des questions simple à l&amp;rsquo;utilisateur. Il est recommandé de ne pas abuser de ce type d&amp;rsquo;interface au risque de casser le flux de productivité de l&amp;rsquo;utilisateur. Lorsque c&amp;rsquo;est possible, vous pouvez utiliser le log pour afficher la plupart des messages et vous appuyer sur settings pour choisir des comportements appropriés dépendants des circonstances.
+UI.MessageBox.GetSaveFileName( options ) Tacview 1.</description>
+    </item>
+    
+    <item>
       <title>UI.Renderer</title>
       <link>https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-main-interface/ui.renderer/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:44 +0200</pubDate>
@@ -98,10 +108,9 @@ Camera.Cockpit
 Camera.External
 Camera.Satellite
 Camera.Free
-Context.Camera.SetOffset( offsetData ) Tacview 1.7.2
-Décalage temporaire de la position et de la rotation de la caméra.
-Le décalage est automatiquement réinitialisé à chaque nouvelle image lorsqu&amp;rsquo;il n&amp;rsquo;est pas remplacé par un addon.
-Les composants suivants peuvent être spécifiés, ils sont tous facultatifs :</description>
+Context.Camera.SetRotation( roll , pitch , yaw ) Tacview 1.8.0
+Oriente la caméra.
+roll: en radian, positif pour une inclinaison vers la droite pitch: en radian, positif en montée yaw: en radian, positif pour un virage vers la droite  Lorsque &amp;ldquo;UI.</description>
     </item>
     
     <item>

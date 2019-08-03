@@ -51,6 +51,17 @@ Cette fonction est utile pour accéder ou charger vos ressources personnalisées
     </item>
     
     <item>
+      <title>StaticObjects</title>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-core-interface/staticobjects/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:52 +0200</pubDate>
+      
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-core-interface/staticobjects/</guid>
+      <description>StaticObjects.GetHandleByName( objectName ) Tacview 1.8.0
+Retrvoue le handle de l&amp;rsquo;objet statique à partir de son nom. Le nom de l&amp;rsquo;objet peut être défini via le tag xml  dans les fichiers kml.
+Names est sensible à la casse et peut ne pas être unique. Cette fonction retourne le projet objet trouvé correspondant. Ne pas oublier que les handles sont volatiles et peuvent ne pas être préservés à l&amp;rsquo;appel suivant du addon dans Tacview.</description>
+    </item>
+    
+    <item>
       <title>Log</title>
       <link>https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-core-interface/log/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:51 +0200</pubDate>

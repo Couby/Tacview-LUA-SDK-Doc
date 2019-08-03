@@ -53,6 +53,19 @@ AddOn path (e.g. C:\ProgramData\Tacview\AddOns\Tutorial 1 - Hello World - CS\)</
     </item>
     
     <item>
+      <title>StaticObjects</title>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:52 +0200</pubDate>
+      
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/</guid>
+      <description>StaticObjects.GetHandleByName( objectName ) Tacview 1.8.0
+Retrieve static object handle from its name. The name of the object can be defined via the  xml tag in kml files.
+Names are case sensitive and may not be unique. This function will return the first matching object. Beware that object handles are volatile and may not be preserved the next time your addon is being called by Tacview.
+Return value:
+handle of the static object or nil of no object correspond to the given name</description>
+    </item>
+    
+    <item>
       <title>Log</title>
       <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/log/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:51 +0200</pubDate>

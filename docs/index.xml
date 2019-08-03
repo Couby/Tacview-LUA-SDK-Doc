@@ -53,6 +53,19 @@ AddOn path (e.g. C:\ProgramData\Tacview\AddOns\Tutorial 1 - Hello World - CS\)</
     </item>
     
     <item>
+      <title>StaticObjects</title>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:52 +0200</pubDate>
+      
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/staticobjects/</guid>
+      <description>StaticObjects.GetHandleByName( objectName ) Tacview 1.8.0
+Retrieve static object handle from its name. The name of the object can be defined via the  xml tag in kml files.
+Names are case sensitive and may not be unique. This function will return the first matching object. Beware that object handles are volatile and may not be preserved the next time your addon is being called by Tacview.
+Return value:
+handle of the static object or nil of no object correspond to the given name</description>
+    </item>
+    
+    <item>
       <title>Log</title>
       <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-core-interface/log/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:51 +0200</pubDate>
@@ -163,6 +176,17 @@ You can specify the id of a parent menu, or you can use nil to insert your menu 
     </item>
     
     <item>
+      <title>UI.MessageBox</title>
+      <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.messagebox/</link>
+      <pubDate>Sat, 13 Apr 2019 18:16:44 +0200</pubDate>
+      
+      <guid>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.messagebox/</guid>
+      <description>Message boxes can be used to display modal notifications and ask for simple questions to the user. It is suggested to not use too many message boxes as they are breaking the productivity flow of the user. Whenever possible, you can use the log to output most of you messages and rely on settings to choose the appropriate behavior depending on the circumstances.
+UI.MessageBox.GetSaveFileName( options ) Tacview 1.8.0
+Asks the user which under which file name he/she wants to save a file.</description>
+    </item>
+    
+    <item>
       <title>UI.Renderer</title>
       <link>https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.renderer/</link>
       <pubDate>Sat, 13 Apr 2019 18:16:44 +0200</pubDate>
@@ -221,11 +245,9 @@ Camera.Cockpit
 Camera.External
 Camera.Satellite
 Camera.Free
-Context.Camera.SetOffset( offsetData ) Tacview 1.7.2
-Temporarily offset camera position and rotation.
-The offset is automatically reset at each new frame when not overridden by an addon.
-The following components can be specified, all of them are optional:
-offsetData = { lateral = meters_positive_to_the_right , longitudinal = meters_positive_forward , vertical = meters_positive_up , roll = radian , pitch = radian , yaw = radian , }  Context.</description>
+Context.Camera.SetRotation( roll , pitch , yaw ) Tacview 1.8.0
+Orient the camera.
+roll: in radian, positive when banking to the right pitch: in radian, positive when climbing yaw: in radian, positive when turning to the right  When &amp;ldquo;UI.View.Camera.Dogfight.Mode&amp;rdquo; == &amp;ldquo;LookAt&amp;rdquo; and &amp;ldquo;UI.</description>
     </item>
     
     <item>

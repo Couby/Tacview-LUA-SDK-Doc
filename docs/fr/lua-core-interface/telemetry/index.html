@@ -12,20 +12,20 @@
     <title>Télémétrie :: Tacview Lua SDK Doc</title>
 
     
-    <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1555616577" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/fontawesome-all.min.css?1555616577" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/hybrid.css?1555616577" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/featherlight.min.css?1555616577" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/perfect-scrollbar.min.css?1555616577" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/auto-complete.css?1555616577" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/atom-one-dark-reasonable.css?1555616577" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/theme.css?1555616577" rel="stylesheet">
-    <link href="/Tacview-LUA-SDK-Doc/css/hugo-theme.css?1555616577" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1564854127" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/fontawesome-all.min.css?1564854127" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/hybrid.css?1564854127" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/featherlight.min.css?1564854127" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/perfect-scrollbar.min.css?1564854127" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/auto-complete.css?1564854127" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/atom-one-dark-reasonable.css?1564854127" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/theme.css?1564854127" rel="stylesheet">
+    <link href="/Tacview-LUA-SDK-Doc/css/hugo-theme.css?1564854127" rel="stylesheet">
     
-      <link href="/Tacview-LUA-SDK-Doc/css/theme-blue.css?1555616577" rel="stylesheet">
+      <link href="/Tacview-LUA-SDK-Doc/css/theme-blue.css?1564854127" rel="stylesheet">
     
 
-    <script src="/Tacview-LUA-SDK-Doc/js/jquery-3.3.1.min.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/jquery-3.3.1.min.js?1564854127"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/lunr.min.js?1555616577"></script>
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/auto-complete.js?1555616577"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/lunr.min.js?1564854127"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/auto-complete.js?1564854127"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/couby.github.io\/Tacview-LUA-SDK-Doc\/\/fr";
     
 </script>
-<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/search.js?1555616577"></script>
+<script type="text/javascript" src="/Tacview-LUA-SDK-Doc/js/search.js?1564854127"></script>
 
     
   </div>
@@ -141,6 +141,25 @@
       <li data-nav-id="/Tacview-LUA-SDK-Doc/fr/lua-core-interface/addons/" title="Add Ons" class="dd-item ">
         <a href="/Tacview-LUA-SDK-Doc/fr/lua-core-interface/addons/">
         Add Ons
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/Tacview-LUA-SDK-Doc/fr/lua-core-interface/staticobjects/" title="StaticObjects" class="dd-item ">
+        <a href="/Tacview-LUA-SDK-Doc/fr/lua-core-interface/staticobjects/">
+        StaticObjects
         
         </a>
     </li>
@@ -325,6 +344,25 @@
       <li data-nav-id="/Tacview-LUA-SDK-Doc/fr/lua-main-interface/ui.menus/" title="UI.Menus" class="dd-item ">
         <a href="/Tacview-LUA-SDK-Doc/fr/lua-main-interface/ui.menus/">
         UI.Menus
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/Tacview-LUA-SDK-Doc/fr/lua-main-interface/ui.messagebox/" title="UI.MessageBox" class="dd-item ">
+        <a href="/Tacview-LUA-SDK-Doc/fr/lua-main-interface/ui.messagebox/">
+        UI.MessageBox
         
         </a>
     </li>
@@ -595,6 +633,7 @@
 <li><a href="#telemetry-anygiventagactive-objecttags-activetagscombination">Telemetry.AnyGivenTagActive( objectTags , activeTagsCombination )</a></li>
 <li><a href="#telemetry-property">Telemetry.Property</a></li>
 <li><a href="#telemetry-clear">Telemetry.Clear()</a></li>
+<li><a href="#telemetry-load-filename">Telemetry.Load( fileName )</a></li>
 <li><a href="#telemetry-isempty">Telemetry.IsEmpty()</a></li>
 <li><a href="#telemetry-islikeempty">Telemetry.IsLikeEmpty()</a></li>
 <li><a href="#telemetry-getdatatimerange">Telemetry.GetDataTimeRange()</a></li>
@@ -605,7 +644,10 @@
 <li><a href="#telemetry-getcurrentshortname-objecthandle">Telemetry.GetCurrentShortName( objectHandle )</a></li>
 <li><a href="#telemetry-gettransform-objecthandle-absolutetime">Telemetry.GetTransform( objectHandle , absoluteTime )</a></li>
 <li><a href="#telemetry-getcurrenttransform-objecthandle">Telemetry.GetCurrentTransform( objectHandle )</a></li>
+<li><a href="#telemetry-getverticalgforce-objecthandle-absolutetime">Telemetry.GetVerticalGForce( objectHandle , absoluteTime )</a></li>
 <li><a href="#telemetry-getcurrentverticalgforce-objecthandle">Telemetry.GetCurrentVerticalGForce( objectHandle )</a></li>
+<li><a href="#telemetry-getabsolutegforce-objecthandle-absolutetime">Telemetry.GetAbsoluteGForce( objectHandle , absoluteTime )</a></li>
+<li><a href="#telemetry-getcurrentabsolutegforce-objecthandle">Telemetry.GetCurrentAbsoluteGForce( objectHandle )</a></li>
 <li><a href="#telemetry-getglobalnumericpropertyindex-propertyname-autocreate">Telemetry.GetGlobalNumericPropertyIndex( propertyName , autoCreate )</a></li>
 <li><a href="#telemetry-getglobaltextpropertyindex-propertyname-autocreate">Telemetry.GetGlobalTextPropertyIndex( propertyName , autoCreate )</a></li>
 <li><a href="#telemetry-getobjectsnumericpropertyindex-propertyname-autocreate">Telemetry.GetObjectsNumericPropertyIndex( propertyName , autoCreate )</a></li>
@@ -619,6 +661,7 @@
 <li><a href="#telemetry-getnumericsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.GetNumericSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</a></li>
 <li><a href="#telemetry-gettextsamplefromindex-objecthandle-sampleindex-propertyindex">Telemetry.GetTextSampleFromIndex( objectHandle , sampleIndex , propertyIndex )</a></li>
 <li><a href="#telemetry-settransform-objecthandle-absolutetime-transform">Telemetry.SetTransform( objectHandle , absoluteTime , transform )</a></li>
+<li><a href="#telemetry-gettransformtimerange-objecthandle">Telemetry.GetTransformTimeRange( objectHandle )</a></li>
 <li><a href="#telemetry-getlifetime-objecthandle">Telemetry.GetLifeTime( objectHandle )</a></li>
 <li><a href="#telemetry-setlifetimeend-objecthandle-absolutetime">Telemetry.SetLifeTimeEnd( objectHandle , absoluteTime )</a></li>
 <li><a href="#telemetry-removenumericsample-objecthandle-absolutetime-propertyindex">Telemetry.RemoveNumericSample( objectHandle , absoluteTime , propertyIndex )</a></li>
@@ -816,6 +859,18 @@ Vous retrouvez les tags actuels d&rsquo;un objets (qui définissent le type de l
 
 <p>Cette fonction n&rsquo;interrompt ni n&rsquo;arrête aucun enregistrement en cours. Il purge simplement toutes les données enregistrées jusque-là.</p>
 
+<h4 id="telemetry-load-filename">Telemetry.Load( fileName )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Cette fonction fusionne le fichier de données indiqué avec celui déjà en mémoire.
+Appelez <em>Telemetry.Clear()</em> avant de charger de nouvelles données si vous ne souhaitez pas fusionner.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+true si le fichier indiqué a correctement été chargé<br></p>
+</div>
+
+
 <h4 id="telemetry-isempty">Telemetry.IsEmpty()</h4>
 
 <p><em>Tacview 1.7.6</em></p>
@@ -974,18 +1029,41 @@ Renvoie le tag de l&rsquo;objet indiqué sous forme de champ de bits.</p>
 </div>
 
 
+<h4 id="telemetry-getverticalgforce-objecthandle-absolutetime">Telemetry.GetVerticalGForce( objectHandle , absoluteTime )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
 <h4 id="telemetry-getcurrentverticalgforce-objecthandle">Telemetry.GetCurrentVerticalGForce( objectHandle )</h4>
 
 <p><em>Tacview 1.7.3</em></p>
 
 <p>Retourne le facteur de charge vertical s&rsquo;il est disponible à l&rsquo;heure actuelle.</p>
 
-<p>Si le facteur de charge vertical a été enregistré, Tacview renverra l&rsquo;échantillon interpolé.</p>
+<p>Le g-Force vertical est le g-Force qui s&rsquo;applique au pilote et à son avion. C&rsquo;est celui généralement affiché en cabine.</p>
 
-<p>Si le facteur de charge vertical n&rsquo;a pas été enregistré, mais que les données de rotation sont disponibles, Tacview calculera le facteur de charge vertical.</p>
+<p>Si le facteur de charge vertical a été enregistré, Tacview renverra l&rsquo;échantillon interpolé.
+Si le facteur de charge vertical n&rsquo;a pas été enregistré, mais que les données de rotation sont disponibles, Tacview calculera le facteur de charge vertical.</p>
 
 <div class="notices note" ><p><strong>Valeur retournée :</strong><br>
         <strong>Vertical G-Force</strong> si disponible.<br>
+        <strong>nil</strong> quand il n&rsquo;y a pas suffisamment de données disponibles (ou l&rsquo;objet n&rsquo;existe pas à ce moment).</p>
+</div>
+
+
+<h4 id="telemetry-getabsolutegforce-objecthandle-absolutetime">Telemetry.GetAbsoluteGForce( objectHandle , absoluteTime )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<h4 id="telemetry-getcurrentabsolutegforce-objecthandle">Telemetry.GetCurrentAbsoluteGForce( objectHandle )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Retourne le facteur de charge absolu de l&rsquo;objet s&rsquo;il est disponible à l&rsquo;heure actuelle.</p>
+
+<p>Le g-Force absolu est l&rsquo;accélération de l&rsquo;objet divisé par G. Il est indépendant de l&rsquo;orientation de l&rsquo;objet ou de sa trajectoire.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+        <strong>Absolute g-Force</strong> si disponible.<br>
         <strong>nil</strong> quand il n&rsquo;y a pas suffisamment de données disponibles (ou l&rsquo;objet n&rsquo;existe pas à ce moment).</p>
 </div>
 
@@ -1134,11 +1212,30 @@ SampleIndex commence à 0 et se termine au compte-1.</p>
 };
 </code></pre>
 
+<h4 id="telemetry-gettransformtimerange-objecthandle">Telemetry.GetTransformTimeRange( objectHandle )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Retrouve les temps du premier et du dernier échantillon transform de l&rsquo;objet spécifié.
+Cette fonction est typiquement utilisé pour énumérer les échantillons sur la période de vie effective.
+Retourne <em>nil</em> si l&rsquo;objet n&rsquo;a pas d&rsquo;échantillon transform disponible.
+Notez que <em>Telemetry.BeginningOfTime</em> peut être retournée si l&rsquo;objet n&rsquo;est pas temporel comme le Bullseye.</p>
+
+<div class="notices note" ><p><strong>Valeur retournée :</strong><br>
+    {<br>
+        firstTransformSampleTime,       &ndash; temps absolu du premier échantillon transform existant<br>
+        lastTransformSampleTime         &ndash; temps absolu du dernier échantillon transform existant<br>
+    }</p>
+</div>
+
+
 <h4 id="telemetry-getlifetime-objecthandle">Telemetry.GetLifeTime( objectHandle )</h4>
 
 <p><em>Tacview 1.7.6</em></p>
 
-<p>Renvoie l&rsquo;heure absolue de la première apparition de l&rsquo;objet et l&rsquo;heure de sa disparition, le cas échéant.</p>
+<p>Renvoie l&rsquo;heure absolue de la première apparition de l&rsquo;objet et l&rsquo;heure de sa disparition, le cas échéant.
+A la différence de <em>GetObjectDataTimeRange()</em>, cette fonction peut retourner une plage de temps plus grande pouvant aller jusqu&rsquo;à <em>Telemetry.EndOfTime</em> si l&rsquo;objet n&rsquo;a jamais été détruit ou retiré du champs de bataille.
+Utilisez préférentiellement <em>GetTransformTimeRange()</em> si vous souhaitez itérer sur les échantillons de télémétrie de l&rsquo;objet via un compteur de temps.</p>
 
 <div class="notices note" ><p><strong>Valeur retournée :</strong><br>
         lifeTimeBegin, lifeTimeEnd</p>
@@ -1389,6 +1486,22 @@ SampleIndex commence à 0 et se termine au compte-1.</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1435,6 +1548,22 @@ SampleIndex commence à 0 et se termine au compte-1.</p>
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1573,20 +1702,20 @@ SampleIndex commence à 0 et se termine au compte-1.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/Tacview-LUA-SDK-Doc/js/clipboard.min.js?1555616577"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.min.js?1555616577"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.jquery.min.js?1555616577"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/jquery.sticky.js?1555616577"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/featherlight.min.js?1555616577"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/html5shiv-printshiv.min.js?1555616577"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/highlight.pack.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/clipboard.min.js?1564854127"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.min.js?1564854127"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/perfect-scrollbar.jquery.min.js?1564854127"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/jquery.sticky.js?1564854127"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/featherlight.min.js?1564854127"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/html5shiv-printshiv.min.js?1564854127"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/highlight.pack.js?1564854127"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/Tacview-LUA-SDK-Doc/js/modernizr.custom-3.6.0.js?1555616577"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/learn.js?1555616577"></script>
-    <script src="/Tacview-LUA-SDK-Doc/js/hugo-learn.js?1555616577"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/modernizr.custom-3.6.0.js?1564854127"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/learn.js?1564854127"></script>
+    <script src="/Tacview-LUA-SDK-Doc/js/hugo-learn.js?1564854127"></script>
 
-    <link href="/Tacview-LUA-SDK-Doc/mermaid/mermaid.css?1555616577" type="text/css" rel="stylesheet" />
-    <script src="/Tacview-LUA-SDK-Doc/mermaid/mermaid.js?1555616577"></script>
+    <link href="/Tacview-LUA-SDK-Doc/mermaid/mermaid.css?1564854127" type="text/css" rel="stylesheet" />
+    <script src="/Tacview-LUA-SDK-Doc/mermaid/mermaid.js?1564854127"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

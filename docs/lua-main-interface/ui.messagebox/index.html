@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/Tacview-LUA-SDK-Doc/images/favicon.png" type="image/png">
 
-    <title>Categories :: Tacview Lua SDK Doc</title>
+    <title>UI.MessageBox :: Tacview Lua SDK Doc</title>
 
     
     <link href="/Tacview-LUA-SDK-Doc/css/nucleus.css?1564854127" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Tacview-LUA-SDK-Doc/categories/">
+  <body class="" data-url="/Tacview-LUA-SDK-Doc/lua-main-interface/ui.messagebox/">
     <nav id="sidebar" class="">
 
 
@@ -298,7 +298,7 @@
   
     
     <li data-nav-id="/Tacview-LUA-SDK-Doc/lua-main-interface/" title="LUA Main Interface" class="dd-item 
-        
+        parent
         
         
         ">
@@ -360,7 +360,7 @@
  
   
     
-      <li data-nav-id="/Tacview-LUA-SDK-Doc/lua-main-interface/ui.messagebox/" title="UI.MessageBox" class="dd-item ">
+      <li data-nav-id="/Tacview-LUA-SDK-Doc/lua-main-interface/ui.messagebox/" title="UI.MessageBox" class="dd-item active">
         <a href="/Tacview-LUA-SDK-Doc/lua-main-interface/ui.messagebox/">
         UI.MessageBox
         
@@ -514,7 +514,7 @@
                   
                     
                     
-                      <option id="en" value="https://couby.github.io/Tacview-LUA-SDK-Doc/categories/" selected>English</option>
+                      <option id="en" value="https://couby.github.io/Tacview-LUA-SDK-Doc/lua-main-interface/ui.messagebox/" selected>English</option>
                     
                   
               
@@ -528,7 +528,7 @@
                   
                     
                     
-                      <option id="fr" value="https://couby.github.io/Tacview-LUA-SDK-Doc/fr/categories/">Français</option>
+                      <option id="fr" value="https://couby.github.io/Tacview-LUA-SDK-Doc/fr/lua-main-interface/ui.messagebox/">Français</option>
                     
                   
               
@@ -569,6 +569,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/Couby/Tacview-LUA-SDK-Doc/edit/master/content/Lua%20Main%20Interface/UI.MessageBox.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -585,7 +596,19 @@
                     
           
           
-            Categories
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/Tacview-LUA-SDK-Doc/'></a> > <a href='/Tacview-LUA-SDK-Doc/lua-main-interface/'>LUA Main Interface</a> > UI.MessageBox
+          
+         
+          
+         
           
         
                  
@@ -594,7 +617,21 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#ui-messagebox-getsavefilename-options">UI.MessageBox.GetSaveFileName( options )</a></li>
+<li><a href="#ui-messagebox-getfoldername-options">UI.MessageBox.GetFolderName( options )</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -610,7 +647,7 @@
           
             <h1>
               
-              Categories
+              UI.MessageBox
             </h1>
           
 
@@ -620,15 +657,83 @@
 
 
 
+<p>Message boxes can be used to display modal notifications and ask for simple questions to the user.
+It is suggested to not use too many message boxes as they are breaking the productivity flow of the user.
+Whenever possible, you can use the log to output most of you messages and rely on settings to choose the appropriate behavior depending on the circumstances.</p>
 
-<ul>
-	
-</ul>
+<h4 id="ui-messagebox-getsavefilename-options">UI.MessageBox.GetSaveFileName( options )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Asks the user which under which file name he/she wants to save a file.</p>
+
+<p>options =
+{
+    defaultFileExtension = defaultFileExtension,    &ndash; excluding &lsquo;.&rsquo;, for example &ldquo;csv&rdquo;
+    fileName = defaultFileNameToSave,               &ndash; (OPTIONAL) default full path or file name for the file to save</p>
+
+<pre><code>fileTypeList =                                  -- List of file types supported for save (usually one item of the typical type)
+{
+    { extensions, description }                 -- File type(s) and description {&quot;*.jpg;*.png&quot;, &quot;Picture&quot;}
+}
+</code></pre>
+
+<p>}</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+    full path of the file name to save<br>
+    <em>nil</em> if the user has canceled the operation</p>
+</div>
+
+
+<div class="notices tip" ><p>Example:<br>
+<br>
+    local options =<br>
+    {<br>
+        defaultFileExtension = &ldquo;csv&rdquo;,<br>
+        fileTypeList =<br>
+        {<br>
+            { &ldquo;<em>.csv&rdquo; , &ldquo;Comma-separated values&rdquo;  }<br>
+            { &ldquo;</em>.xml&rdquo; , &ldquo;Extensible Markup Language&rdquo; }<br>
+            { &ldquo;<em>.json;</em>.js&rdquo; , &ldquo;JavaScript Object Notation&rdquo; }<br>
+        }<br>
+    }<br></p>
+</div>
+
+
+<h4 id="ui-messagebox-getfoldername-options">UI.MessageBox.GetFolderName( options )</h4>
+
+<p><em>Tacview 1.8.0</em></p>
+
+<p>Prompts the user to select a folder and retrieve selected folder full path.</p>
+
+<p>options =
+{
+    folderName = defaultFolderNameToSelect,         &ndash; (OPTIONAL) full path of the folder to select by default
+    canCreateNewFolder = boolean,                   &ndash; (OPTIONAL) set to <em>true</em> to enable the user to create new folders
+}</p>
+
+<div class="notices note" ><p><strong>Return value:</strong><br>
+  full path of the folder name<br>
+  <em>nil</em> if the user has canceled the operation</p>
+</div>
+
+
+<div class="notices tip" ><p>Example:<br>
+<br>
+    local options =<br>
+    {<br>
+        folderName = &ldquo;C:/Downloads/&ldquo;,<br>
+        canCreateNewFolder = true,<br>
+    }</p>
+</div>
+
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -840,6 +945,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -852,6 +958,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -885,6 +994,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -900,6 +1010,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -988,8 +1101,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/Tacview-LUA-SDK-Doc/lua-main-interface/ui.menus/" title="UI.Menus"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/Tacview-LUA-SDK-Doc/lua-core-interface/" title="LUA Core Interface" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/Tacview-LUA-SDK-Doc/lua-main-interface/ui.renderer/" title="UI.Renderer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1020,3 +1135,4 @@
 
   </body>
 </html>
+

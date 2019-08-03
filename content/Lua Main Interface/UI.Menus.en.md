@@ -24,6 +24,13 @@ You can specify the id of a parent menu, or you can use **nil** to insert your m
 {{% /notice %}}
 
 
+#### UI.Menus.AddSeparator( parentMenuId )
+*Tacview 1.8.0*
+
+Add a separator in the specified menu.
+Use separators to group options and commands to make your menus more intuitive for your users.
+
+
 #### UI.Menus.AddCommand( parentMenuId , textLabel , function )
 *Tacview 1.7.2*
 

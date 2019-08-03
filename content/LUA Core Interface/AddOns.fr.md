@@ -59,6 +59,9 @@ Une fenêtre dédiée sera disponible dans Tacview 2.
 
 Sauvegarde un réglage booléen sous le nom donné.
 
+SettingName doit être une chaîne de caractère permettant d'identifier sans ambiguitée votre réglage.
+SettingName ne doit pas prendre la valeur "Enabled" laquelle est réservée par Tacview pour activer/désactiver le addon.
+
 
 #### AddOns.Current.Settings.GetBoolean( settingName , defaultBooleanValue )
 *Tacview 1.7.2*

@@ -8,8 +8,8 @@ pre = "<b>1. </b>"
 
 ---
 
-#	Tacview 1.7.6 Lua Core Interface
-##	Dernière mise à jour : 18-04-2019
+#	Tacview 1.8.0 Lua Core Interface
+##	Dernière mise à jour : 10-06-2019
 
 ---
 
@@ -25,7 +25,7 @@ Vous pouvez par exemple enregistrer le script principal de votre addon comme :
 
 Au début de votre script vous retrouverez typiquement l'interface lua pour laquelle le add-on a été programmé :
 
-	Tacview = require("Tacview176")			-- Request Tacview 1.7.6 API
+	Tacview = require("Tacview180")			-- Request Tacview 1.8.0 API
 
 Ensuite vous pouvez accéder à n'importe quelle méthode du SDK comme dans l'exemple suivant :
 

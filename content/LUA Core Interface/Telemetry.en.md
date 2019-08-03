@@ -153,6 +153,18 @@ This function does not warn the user, nor it gives him the opportunity to save a
 This function does not interrupt or stop any recording in progress. It simply purges all the data recorded up to that point.
 
 
+#### Telemetry.Load( fileName )
+*Tacview 1.8.0*
+
+This function merges given file data with any data already loaded in memory.
+Call Telemetry.Clear() before loading new data if you do not want to merge.
+
+{{% notice note %}}
+**Return value:**<br>
+	true if given file has been successfully loaded<br>
+{{% /notice %}}
+
+
 #### Telemetry.IsEmpty()
 *Tacview 1.7.6*
 
@@ -307,18 +319,37 @@ Native coordinates correspond the original coordinates in the source flight simu
 {{% /notice %}}
 
 
+#### Telemetry.GetVerticalGForce( objectHandle , absoluteTime )
+*Tacview 1.8.0*
 #### Telemetry.GetCurrentVerticalGForce( objectHandle )
 *Tacview 1.7.3*
 
-Returns given object vertical G-Force if available at current time.
+Returns given object vertical g-Force at current time.
 
-If vertical G-Force has been recorded, then Tacview will return the interpolated sample.
+The vertical g-Force is the g-Force which usually the most relevant to the pilot and its aircraft. This is the one displayed in the cockpit.
 
-If vertical G-Force has not been recorded, but rotation data is available, Tacview will calculate the vertical G-Force.
+If vertical g-Force has been recorded, then Tacview will return the interpolated sample.
+If vertical g-Force has not been recorded, but rotation data is available, Tacview will calculate the vertical G-Force.
 
 {{% notice note %}}
 **Return value:**<br>
 		**Vertical G-Force** if available.<br>
+		**nil** when not enough data is available (or object does not exist at this time).
+{{% /notice %}}
+
+
+#### Telemetry.GetAbsoluteGForce( objectHandle , absoluteTime )
+*Tacview 1.8.0*
+#### Telemetry.GetCurrentAbsoluteGForce( objectHandle )
+*Tacview 1.8.0*
+
+Returns given object absolute g-Force is available at current time.
+
+The absolute g-Force is the acceleration of the object divided by G. It is independent of the object orientation or trajectory.
+
+{{% notice note %}}
+**Return value:**<br>
+		**absolute g-Force** if available.<br>
 		**nil** when not enough data is available (or object does not exist at this time).
 {{% /notice %}}
 
@@ -450,10 +481,29 @@ Do not forget to normalize angles before displaying then as text to the final us
 	};
 
 
+#### Telemetry.GetTransformTimeRange( objectHandle )
+*Tacview 1.8.0*
+
+Retrieve the time of the first and last transform sample available for the specified object.
+This function is typically useful to enumerate object samples over its effective activity period.
+Returns *nil* if the object does not have any transform sample available.
+Note that *Telemetry.BeginningOfTime* can be returned if the object is timeless like a Bullseye.
+
+{{% notice note %}}
+**Return value:**<br>
+	{<br>
+		firstTransformSampleTime,		-- first effective transform sample absolute time<br>
+		lastTransformSampleTime			-- last effective transform sample absolute time<br>
+	}
+{{% /notice %}}
+
+
 #### Telemetry.GetLifeTime( objectHandle )
 *Tacview 1.7.6*
 
 Return absolute time of the object first appearance and its time of disappearance if applicable.
+Unlike GetObjectDataTimeRange(), this function may return a wider range which can goes up to Telemetry.EndOfTime if the object has never been destroyed or removed from the battlefield.
+Prefer the function GetTransformTimeRange() if you want to iterate over the object telemetry samples via a time counter.
 
 {{% notice note %}}
 **Return value:**<br>

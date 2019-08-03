@@ -21,6 +21,28 @@ Returns the current camera mode.
 {{% /notice %}}
 
 
+#### Context.Camera.SetRotation( roll , pitch , yaw )
+*Tacview 1.8.0*
+
+Orient the camera.
+
+	roll: in radian, positive when banking to the right
+	pitch: in radian, positive when climbing
+	yaw: in radian, positive when turning to the right
+
+When "UI.View.Camera.Dogfight.Mode" == "LookAt" and "UI.View.Camera.Dogfight.Enabled" == true then the rotation is an offset relative to the target object.
+In other words, the rotation of (0,0,0) will point the camera toward the secondary object.
+
+If you want to look to the right of the targeted object, simply set the yaw of camera to +45 degrees:
+
+	Tacview.Context.Camera.SetExternalViewRotation( 0 , 0 , math.rad(45) )
+
+{{% notice tip %}}
+**NOTE**: When the camera mode is switched, the rotation is usually reset.<br>
+For that reason, you should change the rotation AFTER switching the camera to the mode of your choice.
+{{% /notice %}}
+
+
 #### Context.Camera.SetOffset( offsetData )
 *Tacview 1.7.2*
 

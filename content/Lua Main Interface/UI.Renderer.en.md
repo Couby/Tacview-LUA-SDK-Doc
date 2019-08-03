@@ -130,8 +130,8 @@ Draw states are automatically freed when the addon is unloaded.
 
 		[
 			blendMode =
-				Tacview.Renderer.BlendMode.Normal
-				Tacview.Renderer.BlendMode.Additive
+					Tacview.UI.Renderer.BlendMode.Normal
+					Tacview.UI.Renderer.BlendMode.Additive
 		]
 	}
 
@@ -209,9 +209,15 @@ DO NOT re-declare the state and/or the vertex array at each draw call, this will
 		pitch = radian,
 		yaw = radian,
 
-		-- Optional scale
+		-- Optional uniform scale
 
 		scale = number
+
+		-- Optional non-uniform scale
+		-- Tacview 1.8.0
+
+		scaleX = number
+		scaleY = number
 	}
 
 During the UI pass, 2D coordinates are like the following:
@@ -283,7 +289,7 @@ Print the given text at the corresponding x,y coordinates.
 
 Should be used only during 2D transparent UI operations.
 
-You can set **renderState.blendMode** to **Tacview.Renderer.BlendMode.Additive** to display HUD style text.
+You can set **renderState.blendMode** to **Tacview.UI.Renderer.BlendMode.Additive** to display HUD style text.
 
 	transform =
 	{

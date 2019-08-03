@@ -8,8 +8,8 @@ pre = "<b>1. </b>"
 
 ---
 
-#	Tacview 1.7.6 Lua Core Interface
-##	Last update: 2019-04-18
+#	Tacview 1.8.0 Lua Core Interface
+##	Last update: 2019-06-10
 
 ---
 
@@ -25,7 +25,7 @@ For example you could store your addon main script as:
 
 At the beginning of your script you will typically retrieve the available Lua interface for which your add-on has been programmed:
 
-	Tacview = require("Tacview176")			-- Request Tacview 1.7.6 API
+	Tacview = require("Tacview180")			-- Request Tacview 1.8.0 API
 
 Then you can access any of the following methods like the following:
 

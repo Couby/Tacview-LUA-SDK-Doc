@@ -59,6 +59,9 @@ A dedicated window will be available in Tacview 2.
 
 Save a Boolean setting under the given name.
 
+SettingName should be set to a string which unambiguously identify your setting.
+SettingName must not be equal to "Enabled" which is reserved by Tacview to enable/disable the addon.
+
 
 #### AddOns.Current.Settings.GetBoolean( settingName , defaultBooleanValue )
 *Tacview 1.7.2*

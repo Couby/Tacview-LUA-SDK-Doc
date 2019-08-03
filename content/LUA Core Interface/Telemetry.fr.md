@@ -153,6 +153,18 @@ Cette fonction ne prévient pas l'utilisateur et ne lui donne pas la possibilit�
 Cette fonction n'interrompt ni n'arrête aucun enregistrement en cours. Il purge simplement toutes les données enregistrées jusque-là.
 
 
+#### Telemetry.Load( fileName )
+*Tacview 1.8.0*
+
+Cette fonction fusionne le fichier de données indiqué avec celui déjà en mémoire.
+Appelez *Telemetry.Clear()* avant de charger de nouvelles données si vous ne souhaitez pas fusionner.
+
+{{% notice note %}}
+**Valeur retournée :**<br>
+true si le fichier indiqué a correctement été chargé<br>
+{{% /notice %}}
+
+
 #### Telemetry.IsEmpty()
 *Tacview 1.7.6*
 
@@ -308,18 +320,37 @@ Les coordonnées natives correspondent aux coordonnées d'origine dans le simula
 {{% /notice %}}
 
 
+#### Telemetry.GetVerticalGForce( objectHandle , absoluteTime )
+*Tacview 1.8.0*
 #### Telemetry.GetCurrentVerticalGForce( objectHandle )
 *Tacview 1.7.3*
 
 Retourne le facteur de charge vertical s'il est disponible à l'heure actuelle.
 
-Si le facteur de charge vertical a été enregistré, Tacview renverra l'échantillon interpolé.
+Le g-Force vertical est le g-Force qui s'applique au pilote et à son avion. C'est celui généralement affiché en cabine.
 
+Si le facteur de charge vertical a été enregistré, Tacview renverra l'échantillon interpolé.
 Si le facteur de charge vertical n'a pas été enregistré, mais que les données de rotation sont disponibles, Tacview calculera le facteur de charge vertical.
 
 {{% notice note %}}
 **Valeur retournée :**<br>
 		**Vertical G-Force** si disponible.<br>
+		**nil** quand il n'y a pas suffisamment de données disponibles (ou l'objet n'existe pas à ce moment).
+{{% /notice %}}
+
+
+#### Telemetry.GetAbsoluteGForce( objectHandle , absoluteTime )
+*Tacview 1.8.0*
+#### Telemetry.GetCurrentAbsoluteGForce( objectHandle )
+*Tacview 1.8.0*
+
+Retourne le facteur de charge absolu de l'objet s'il est disponible à l'heure actuelle.
+
+Le g-Force absolu est l'accélération de l'objet divisé par G. Il est indépendant de l'orientation de l'objet ou de sa trajectoire.
+
+{{% notice note %}}
+**Valeur retournée :**<br>
+		**Absolute g-Force** si disponible.<br>
 		**nil** quand il n'y a pas suffisamment de données disponibles (ou l'objet n'existe pas à ce moment).
 {{% /notice %}}
 
@@ -451,10 +482,29 @@ N'oubliez pas de normaliser les angles avant d'afficher ensuite le texte à l'ut
 	};
 
 
+#### Telemetry.GetTransformTimeRange( objectHandle )
+*Tacview 1.8.0*
+
+Retrouve les temps du premier et du dernier échantillon transform de l'objet spécifié.
+Cette fonction est typiquement utilisé pour énumérer les échantillons sur la période de vie effective.
+Retourne *nil* si l'objet n'a pas d'échantillon transform disponible.
+Notez que *Telemetry.BeginningOfTime* peut être retournée si l'objet n'est pas temporel comme le Bullseye.
+
+{{% notice note %}}
+**Valeur retournée :**<br>
+	{<br>
+		firstTransformSampleTime,		-- temps absolu du premier échantillon transform existant<br>
+		lastTransformSampleTime			-- temps absolu du dernier échantillon transform existant<br>
+	}
+{{% /notice %}}
+
+
 #### Telemetry.GetLifeTime( objectHandle )
 *Tacview 1.7.6*
 
 Renvoie l'heure absolue de la première apparition de l'objet et l'heure de sa disparition, le cas échéant.
+A la différence de *GetObjectDataTimeRange()*, cette fonction peut retourner une plage de temps plus grande pouvant aller jusqu'à *Telemetry.EndOfTime* si l'objet n'a jamais été détruit ou retiré du champs de bataille.
+Utilisez préférentiellement *GetTransformTimeRange()* si vous souhaitez itérer sur les échantillons de télémétrie de l'objet via un compteur de temps.
 
 {{% notice note %}}
 **Valeur retournée :**<br>

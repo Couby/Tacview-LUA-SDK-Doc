@@ -130,8 +130,8 @@ Les états de dessin sont automatiquement libérés lorsque l'addon est décharg
 
 		[
 			blendMode =
-				Tacview.Renderer.BlendMode.Normal
-				Tacview.Renderer.BlendMode.Additive
+					Tacview.UI.Renderer.BlendMode.Normal
+					Tacview.UI.Renderer.BlendMode.Additive
 		]
 	}
 
@@ -209,9 +209,15 @@ NE re-déclarez PAS l'état et/ou le tableau de vertex à chaque appel de dessin
 		pitch = radian,
 		yaw = radian,
 
-		-- Echelle optionnelle
+		-- Echelle uniforme optionnelle
 
-		scale = nombre
+		scale = number
+
+		-- Echelle non uniforme optionnelle
+		-- Tacview 1.8.0
+
+		scaleX = number
+		scaleY = number
 	}
 
 Lors du passage de l'interface utilisateur, les coordonnées 2D sont comme en suivant :
@@ -283,7 +289,7 @@ Imprimer le texte donné aux coordonnées x, y correspondantes.
 
 Devrait être utilisé uniquement lors d'opérations d'interface utilisateur transparente en 2D.
 
-Vous pouvez définir **renderState.blendMode** sur **Tacview.Renderer.BlendMode.Additive** pour afficher le texte de style HUD.
+Vous pouvez définir **renderState.blendMode** sur **Tacview.UI.Renderer.BlendMode.Additive** pour afficher le texte de style HUD.
 
 	transform =
 	{

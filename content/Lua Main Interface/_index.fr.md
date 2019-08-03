@@ -10,8 +10,8 @@ pre = "<b>2. </b>"
 
 ---
 
-#	Tacview 1.7.6 Lua General Interface
-##	Dernière mise à jour : 06-02-2019
+#	Tacview 1.8.0 Lua General Interface
+##	Dernière mise à jour : 10-06-2019
 
 ---
 

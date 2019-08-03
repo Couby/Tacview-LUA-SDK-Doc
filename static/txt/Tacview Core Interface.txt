@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------------------------------------------------
 
-	Tacview 1.7.6 Lua Core Interface
-	Last update: 2019-02-27
+	Tacview 1.8.0 Lua Core Interface
+	Last update: 2019-06-10
 
 --------------------------------------------------------------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ For example you could store your addon main script as:
 
 At the beginning of your script you will typically retrieve the available Lua interface for which your add-on has been programmed:
 
-	Tacview = require("Tacview176")			-- Request Tacview 1.7.6 API
+	Tacview = require("Tacview180")			-- Request Tacview 1.8.0 API
 
 Then you can access any of the following methods like the following:
 
@@ -132,6 +132,9 @@ AddOns.Current.SetNotes( textNotes ) -- Tacview 1.7.2
 AddOns.Current.Settings.SetBoolean( settingName , newBooleanValue ) -- Tacview 1.7.2
 
 	Save a Boolean setting under the given name.
+
+	SettingName should be set to a string which unambiguously identify your setting.
+	SettingName must not be equal to "Enabled" which is reserved by Tacview to enable/disable the addon.
 
 AddOns.Current.Settings.GetBoolean( settingName , defaultBooleanValue ) -- Tacview 1.7.2
 
@@ -380,6 +383,28 @@ Context.SetAbsoluteTime( absoluteTime ) -- Tacview 1.7.6
 	end
 
 --------------------------------------------------------------------------------------------------------------------------------
+StaticObjects
+
+StaticObjects.GetHandleByName( objectName )
+
+	Retrieve static object handle from its name.
+	The name of the object can be defined via the <name> xml tag in kml files.
+
+	Names are case sensitive and may not be unique.
+	This function will return the first matching object.
+	Beware that object handles are volatile and may not be preserved the next time your addon is being called by Tacview.
+
+	Return value:
+
+		handle of the static object
+		or nil of no object correspond to the given name	
+
+StaticObjects.SetVisible( staticObjectHandle , isVisible )
+
+	Show or hide given object.
+	You can use StaticObjects.GetHandleByName() to retrieve the handle of the object you would like to show/hide.
+
+--------------------------------------------------------------------------------------------------------------------------------
 Telemetry
 
 	This module is the heart of Tacview.
@@ -500,6 +525,15 @@ Telemetry.Clear() -- Tacview 1.7.2
 	This function does not warn the user, nor it gives him the opportunity to save any data.
 	This function does not interrupt or stop any recording in progress. It simply purges all the data recorded up to that point.
 
+Telemetry.Load( fileName ) -- Tacview 1.8.0
+
+	This function merges given file data with any data already loaded in memory.
+	Call Telemetry.Clear() before loading new data if you do not want to merge.
+
+	Return value:
+
+		true if given file has been successfully loaded
+
 Telemetry.IsEmpty() -- Tacview 1.7.6
 
 	Tells if no at all telemetry is currently loaded in memory.
@@ -616,15 +650,31 @@ Telemetry.GetCurrentTransform( objectHandle ) -- Tacview 1.7.2
 		validity is set to false if the value does not really apply for the given time (typically if the object does not exist at the given time)
 		event when validity is set to false, the value is valid and usable (this simplify the client code)
 
+Telemetry.GetVerticalGForce( objectHandle , absoluteTime ) -- Tacview 1.8.0
 Telemetry.GetCurrentVerticalGForce( objectHandle ) -- Tacview 1.7.3
 
-	Returns given object vertical G-Force is available at current time.
-	If vertical G-Force has been recorded, then Tacview will return the interpolated sample.
-	If vertical G-Force has not been recorded, but rotation data is available, Tacview will calculate the vertical G-Force.
+	Returns given object vertical g-Force at current time.
+
+	The vertical g-Force is the g-Force which usually the most relevant to the pilot and its aircraft. This is the one displayed in the cockpit.
+
+	If vertical g-Force has been recorded, then Tacview will return the interpolated sample.
+	If vertical g-Force has not been recorded, but rotation data is available, Tacview will calculate the vertical G-Force.
 
 	Return value:
 
-		Vertical G-Force if available.
+		Vertical g-Force if available.
+		nil when not enough data is available (or object does not exist at this time).
+
+Telemetry.GetAbsoluteGForce( objectHandle , absoluteTime ) -- Tacview 1.8.0
+Telemetry.GetCurrentAbsoluteGForce( objectHandle ) -- Tacview 1.8.0
+
+	Returns given object absolute g-Force is available at current time.
+
+	The absolute g-Force is the acceleration of the object divided by G. It is independent of the object orientation or trajectory.
+
+	Return value:
+
+		absolute g-Force if available.
 		nil when not enough data is available (or object does not exist at this time).
 
 Telemetry.GetGlobalNumericPropertyIndex( propertyName , autoCreate ) -- Tacview 1.7.6
@@ -723,9 +773,26 @@ Telemetry.SetTransform( objectHandle , absoluteTime , transform ) -- Tacview 1.7
 		f32 heading;		-- (radian) Heading in native coordinates system
 	};
 
+Telemetry.GetTransformTimeRange( objectHandle ) -- Tacview 1.8.0
+
+	Retrieve the time of the first and last transform sample available for the specified object.
+	This function is typically useful to enumerate object samples over its effective activity period.
+	Returns nil if the object does not have any transform sample available.
+	Note that Telemetry.BeginningOfTime can be returned if the object is timeless like a Bullseye.
+
+	Return value:
+
+	{
+		firstTransformSampleTime,		-- first effective transform sample absolute time
+		lastTransformSampleTime			-- last effective transform sample absolute time
+	}
+
+
 Telemetry.GetLifeTime( objectHandle ) -- Tacview 1.7.6
 
 	Return absolute time of the object first appearance and its time of disappearance if applicable.
+	Unlike GetObjectDataTimeRange(), this function may return a wider range which can goes up to Telemetry.EndOfTime if the object has never been destroyed or removed from the battlefield.
+	Prefer the function GetTransformTimeRange() if you want to iterate over the object telemetry samples via a time counter.
 
 	Return value:
 

@@ -1,7 +1,8 @@
 --------------------------------------------------------------------------------------------------------------------------------
 
-	Tacview 1.7.6 Lua General Interface
-	Last update: 2019-02-06
+	Tacview 1.8.0 Lua General Interface
+	Last update: 2019-06-10
+	
 
 --------------------------------------------------------------------------------------------------------------------------------
 
@@ -58,6 +59,69 @@ UI.GetWindowHandle() -- Tacview 1.7.5
 		This handle may be nil if Tacview is executed in silent mode with the command line.
 
 --------------------------------------------------------------------------------------------------------------------------------
+UI.MessageBox
+
+	Message boxes can be used to display modal notifications and ask for simple questions to the user.
+	It is suggested to not use too many message boxes as they are breaking the productivity flow of the user.
+	Whenever possible, you can use the log to output most of you messages and rely on settings to choose the appropriate behavior depending on the circumstances.
+
+UI.MessageBox.GetSaveFileName( options ) -- Tacview 1.8.0
+
+	Asks the user which under which file name he/she wants to save a file.
+
+	options =
+	{
+		defaultFileExtension = defaultFileExtension,	-- excluding '.', for example "csv"
+		fileName = defaultFileNameToSave,				-- (OPTIONAL) default full path or file name for the file to save
+
+		fileTypeList =									-- List of file types supported for save (usually one item of the typical type)
+		{
+			{ extensions, description }					-- File type(s) and description {"*.jpg;*.png", "Picture"}
+		}
+	}
+
+	Return value:
+
+		full path of the file name to save
+		nil if the user has canceled the operation
+
+	Example:
+
+		local options =
+		{
+			defaultFileExtension = "csv",
+			fileTypeList =
+			{
+				{ "*.csv" , "Comma-separated values"  }
+				{ "*.xml" , "Extensible Markup Language" }
+				{ "*.json;*.js" , "JavaScript Object Notation" }
+			}
+		}
+
+UI.MessageBox.GetFolderName( options ) -- Tacview 1.8.0
+
+	Prompts the user to select a folder and retrieve selected folder full path.
+
+	options =
+	{
+		folderName = defaultFolderNameToSelect,			-- (OPTIONAL) full path of the folder to select by default
+		canCreateNewFolder = boolean,					-- (OPTIONAL) set to true to enable the user to create new folders
+	}
+
+	Return value:
+
+		full path of the folder name
+		nil if the user has canceled the operation
+
+	Example:
+
+		local options =
+		{
+			folderName = "C:/Downloads/",
+			canCreateNewFolder = true,
+		}
+
+--------------------------------------------------------------------------------------------------------------------------------
 UI.Menus
 
 	The Menu interface is useful to create and insert commands and options in Tacview menus.
@@ -72,6 +136,11 @@ UI.Menus.AddMenu( parentMenuId , textLabel ) -- Tacview 1.7.2
 	Return value:
 
 		a menu id (integer) which can be used late to insert sub items or to remove the menu.
+
+UI.Menus.AddSeparator( parentMenuId ) -- Tacview 1.8.0
+
+	Add a separator in the specified menu.
+	Use separators to group options and commands to make your menus more intuitive for your users.
 
 UI.Menus.AddCommand( parentMenuId , textLabel , function ) -- Tacview 1.7.2
 
@@ -194,8 +263,8 @@ UI.Renderer.ReleaseRenderState( renderStateHandle ) -- Tacview 1.7.2
 
 		[
 			blendMode =
-				Tacview.Renderer.BlendMode.Normal
-				Tacview.Renderer.BlendMode.Additive
+				Tacview.UI.Renderer.BlendMode.Normal
+				Tacview.UI.Renderer.BlendMode.Additive
 		]
 	}
 
@@ -260,9 +329,15 @@ UI.Renderer.DrawUIVertexArray( transform , renderStateHandle , vertexArrayHandle
 		pitch = radian,
 		yaw = radian,
 
-		-- Optional scale
+		-- Optional uniform scale
 
 		scale = number
+
+		-- Optional non-uniform scale
+		-- Tacview 1.8.0
+
+		scaleX = number
+		scaleY = number
 	}
 
 	During the UI pass, 2D coordinates are like the following:
@@ -323,7 +398,7 @@ UI.Renderer.Print( transform , renderStateHandle , text ) -- Tacview 1.7.3
 	Print the given text at the corresponding x,y coordinates.
 	Should be used only during 2D transparent UI operations.
 
-	You can set renderState.blendMode to Tacview.Renderer.BlendMode.Additive to display HUD style text.
+	You can set renderState.blendMode to Tacview.UI.Renderer.BlendMode.Additive to display HUD style text.
 
 	transform =
 	{
@@ -423,6 +498,24 @@ Context.Camera.GetMode() -- Tacview 1.7.2
 		Camera.External
 		Camera.Satellite
 		Camera.Free
+
+Context.Camera.SetRotation( roll , pitch , yaw ) -- Tacview 1.8.0
+
+	Orient the camera.
+
+		roll: in radian, positive when banking to the right
+		pitch: in radian, positive when climbing
+		yaw: in radian, positive when turning to the right
+
+	When "UI.View.Camera.Dogfight.Mode" == "LookAt" and "UI.View.Camera.Dogfight.Enabled" == true then the rotation is an offset relative to the target object.
+	In other words, the rotation of (0,0,0) will point the camera toward the secondary object.
+
+	If you want to look to the right of the targeted object, simply set the yaw of camera to +45 degrees:
+
+		Tacview.Context.Camera.SetExternalViewRotation( 0 , 0 , math.rad(45) )
+
+	NOTE: When the camera mode is switched, the rotation is usually reset.
+	For that reason, you should change the rotation AFTER switching the camera to the mode of your choice.
 
 Context.Camera.SetOffset( offsetData ) -- Tacview 1.7.2
 

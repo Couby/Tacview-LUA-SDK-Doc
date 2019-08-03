@@ -24,6 +24,13 @@ Vous pouvez spécifier l'identifiant d'un menu parent ou vous pouvez utiliser **
 {{% /notice %}}
 
 
+#### UI.Menus.AddSeparator( parentMenuId )
+*Tacview 1.8.0*
+
+Ajoute un séparateur dans le menu indiqué.
+Utilisez des séparateurs pour grouper des options et commandes, rendant ainsi vos menus plus intuitifs pour vos utilisateurs.
+
+
 #### UI.Menus.AddCommand( parentMenuId , textLabel , function )
 *Tacview 1.7.2*
 

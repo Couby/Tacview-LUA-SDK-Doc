@@ -21,6 +21,28 @@ Retourne le mode de caméra actuel.
 {{% /notice %}}
 
 
+#### Context.Camera.SetRotation( roll , pitch , yaw )
+*Tacview 1.8.0*
+
+Oriente la caméra.
+
+	roll: en radian, positif pour une inclinaison vers la droite
+	pitch: en radian, positif en montée
+	yaw: en radian, positif pour un virage vers la droite
+
+Lorsque "UI.View.Camera.Dogfight.Mode" == "LookAt" et "UI.View.Camera.Dogfight.Enabled" == true la rotation produit un décalage relatif à l'objet cible.
+En d'autres mots, la rotation de (0,0,0) pointera la camera vers l'objet secondaire.
+
+Si vous voulez regarder sur la droite de l'objet cible, réglez simplement le yaw de la caméra sur +45 degrés:
+
+	Tacview.Context.Camera.SetExternalViewRotation( 0 , 0 , math.rad(45) )
+
+{{% notice tip %}}
+**NOTE**: Lorsque le mode caméra est sélectionné, la rotation est généralement mise à zéro.<br>
+Pour cette raison, vous devez changer la rotation APRES le passage dans le mode caméra de votre choix.
+{{% /notice %}}
+
+
 #### Context.Camera.SetOffset( offsetData )
 *Tacview 1.7.2*
 
